@@ -316,3 +316,102 @@ Halaman khusus untuk daftar layanan treatment.
    Penutup dari bagian footer. Dengan ini, user paham kalau halaman sudah sampai bagian akhir.
 
 ---
+
+`AboutUs.html`
+
+<img src="./images/readme-images/main-aboutUs.png" alt="Struktur Dasar HTML" width="900"/>
+
+## Tag yang digunakan
+
+1. `<body>`  
+   Digunakan untuk membungkus seluruh konten utama dari halaman web. Semua elemen yang akan ditampilkan ke pengguna berada di dalam tag ini.  
+   Karena tanpa `<body>`, browser tidak tahu bagian mana yang harus ditampilkan
+
+2. `<main>`  
+   Digunakan untuk menandai bagian konten utama dari sebuah halaman web.  
+   Membantu SEO dan screen reader memahami bagian inti dari halaman, sehingga lebih semantik.
+
+
+3. `<header>`  
+   Digunakan untuk membungkus elemen pengantar halaman.  
+   Pada kode ini, `<header>` menampilkan bagian "About Us" sebagai identitas atau judul section.
+
+
+4. `<h1>`  
+   Tag heading terbesar untuk judul utama.  
+   Di sini dipakai untuk menampilkan teks **"About Us"** agar jelas bahwa halaman ini adalah bagian tentang perusahaan. Juga penting untuk SEO dan hierarki konten.
+
+
+5. `<section>`  
+   Digunakan untuk mengelompokkan konten yang saling berhubungan.  
+   Pada kode ini, `<section>` dipakai untuk membungkus keseluruhan deskripsi perusahaan (visi, cerita awal, perjalanan brand).
+
+6. `<p>`  
+   Digunakan untuk menampilkan teks dalam bentuk paragraf.  
+   - `<p1>` berisi penjelasan visi/misi brand.  
+   - `<p2>` berisi cerita awal perjalanan brand.  
+   - `<p3>` berisi perkembangan dan pencapaian brand.  
+   Dengan `<p>`, teks lebih rapi, mudah dibaca, dan terstruktur.
+
+7. `<br>`  
+   Digunakan untuk membuat jarak atau pindah baris antar paragraf.  
+   Pada kode ini dipakai untuk memberi spasi tambahan di antara paragraf. Namun, lebih baik menggunakan CSS untuk mengatur jarak agar lebih fleksibel.
+
+8. `</...>` (closing tag)  
+   Hampir semua elemen memiliki penutup seperti `</main>`, `</header>`, `</section>`, `</p>`.  
+   Penutup tag penting agar struktur dokumen jelas, tidak error, dan mudah dipahami browser.
+
+---
+
+<img src="./images/readme-images/main-aboutUs2.png" alt="Struktur Dasar HTML" width="900"/>
+
+# Penjelasan Tag HTML pada Form Contact Us
+
+## Tag yang digunakan
+
+1. `<main>`  
+   Digunakan untuk menandai konten utama halaman web. Semua isi penting (gambar, teks, dan form kontak) ditempatkan di dalamnya sehingga memudahkan pembaca maupun mesin pencari mengenali bagian inti halaman.
+
+2. `<section>`  
+   Berfungsi untuk mengelompokkan bagian tertentu dari halaman. Di sini digunakan untuk membungkus bagian **Contact Us**, sehingga lebih terstruktur dan mudah dipahami.
+
+3. `<img>`  
+   Dipakai untuk menampilkan gambar. Pada kode ini, gambar facial massage ditampilkan dengan atribut `alt` (teks alternatif jika gambar gagal muncul) dan `width="300"` agar ukurannya tidak terlalu besar.  
+
+4. `<h2>`  
+   Heading tingkat 2, digunakan untuk judul bagian. Di sini dipakai untuk judul "Contact Us", sehingga user langsung tahu topik yang sedang ditampilkan.
+
+5. `<p>`  
+   Digunakan untuk membuat paragraf teks. Dalam kode ini dipakai untuk memberi informasi singkat kepada user agar mengisi form jika ada pertanyaan, saran, atau kritik.
+
+6. `<form>`  
+   Tag ini digunakan untuk membuat formulir agar user bisa mengirimkan data (nama, email, pesan). Semua elemen input dimasukkan di dalam `<form>`.
+
+7. `<label>`  
+   Digunakan untuk memberikan keterangan pada setiap input form. Misalnya "Nama", "Email", dan "Pesan".  
+   Atribut `for` menghubungkan label dengan input/textarea berdasarkan `id`, sehingga meningkatkan aksesibilitas (misalnya saat user klik label, otomatis fokus ke input).
+
+8. `<input>`  
+   Tag untuk menerima data dari user.  
+   - `type="text"` → untuk input teks biasa (nama).  
+   - `type="email"` → khusus untuk email, browser otomatis bisa memberi validasi jika format email salah.  
+   Atribut `id` dan `name` digunakan untuk identifikasi input ini saat data dikirim.
+
+9. `<textarea>`  
+   Digunakan untuk input teks panjang (pesan user). Berbeda dengan `<input>`, tag ini bisa menampung beberapa baris teks.
+
+10. `<button>`  
+    Digunakan untuk membuat tombol.  
+    - `type="submit"` artinya tombol ini berfungsi mengirimkan isi form ke server.  
+    - Tulisan **Kirim** ditampilkan di tombol agar user tahu fungsinya.
+
+11. `<br>`  
+    Tag untuk membuat baris baru. Di sini digunakan agar tampilan form lebih rapi (setiap label dan input ditampilkan di baris berbeda).
+
+12. `<hr>`  
+    Digunakan untuk menampilkan garis horizontal sebagai pemisah antar bagian konten halaman.  
+
+13. `</body>`  
+    Penutup dari seluruh isi halaman web yang ditampilkan ke user.
+
+---
