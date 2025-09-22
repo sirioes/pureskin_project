@@ -365,8 +365,6 @@ Halaman khusus untuk daftar layanan treatment.
 
 <img src="./images/readme-images/main-aboutUs2.png" alt="Struktur Dasar HTML" width="900"/>
 
-# Penjelasan Tag HTML pada Form Contact Us
-
 ## Tag yang digunakan
 
 1. `<main>`  
@@ -413,5 +411,100 @@ Halaman khusus untuk daftar layanan treatment.
 
 13. `</body>`  
     Penutup dari seluruh isi halaman web yang ditampilkan ke user.
+
+---
+
+`OurProducts.html`
+
+<img src="./images/readme-images/main-ourProducts.png" alt="Struktur Our Products" width="900"/>
+
+## Tag yang digunakan
+
+1. `<body>`
+   Karena semua konten website yang ingin ditampilkan ke user harus ada di sini. Tanpa `<body>`, browser tidak akan menampilkan apapun.
+
+2. `<!-- ... -->`
+   Supaya kode lebih rapi dan mudah dibaca oleh developer. Komentar ini membantu mengenali bagian tertentu (contoh: `<!-- Main -->`, `<!-- Face Care -->`).
+
+3. `<main>`
+   Dipakai agar jelas mana konten utama di halaman. Berguna untuk pembaca kode, mesin pencari (SEO), dan aksesibilitas.
+
+4. `<header>`
+   Untuk menaruh judul utama dan deskripsi awal halaman. Ini memisahkan bagian pembuka dari isi konten produk.
+
+5. `<h1>`
+   Supaya ada judul besar yang menjelaskan isi halaman. Membuat user langsung tahu topik utama halaman, yaitu “Our Products”.
+
+6. `<p>`
+   Dipakai untuk teks deskriptif. Berguna menjelaskan informasi detail tentang produk dan manfaatnya agar lebih jelas untuk user.
+
+7. `<section>`
+   Untuk mengelompokkan konten jadi satu bagian tertentu. Di sini, bagian produk dipisahkan agar mudah dipahami dan dikelompokkan sesuai kategori.
+
+8. `<h2>`
+   Supaya ada subjudul yang menjelaskan tiap kategori. Membantu user tahu produk ini termasuk bagian “Face Care”.
+
+9. `<h3>`
+   Dipakai untuk nama produk spesifik. Dengan ini, struktur heading jelas: halaman (h1) → kategori (h2) → produk (h3).
+
+10. `<img>`
+    Menampilkan gambar produk agar lebih menarik secara visual. Atribut `alt` dipakai untuk aksesibilitas & SEO, `width` mengatur ukuran gambar.
+
+11. `<br>`
+    Untuk membuat baris baru, sehingga teks lebih rapi tanpa perlu memulai paragraf baru.
+
+12. `<em>`
+    Memberikan penekanan (italic) pada teks, contohnya nama produk. Membuat teks lebih bervariasi tampilannya.
+
+13. `<strong>`
+    Digunakan agar teks terlihat tebal. Biasanya dipakai untuk menegaskan harga supaya lebih menonjol.
+
+14. `<button>`
+    Memberikan interaksi ke user, contohnya tombol “Lihat Produk”. Dengan `type="submit"`, tombol ini bisa dipakai untuk aksi (misalnya form).
+
+15. `<hr>`
+    Membuat garis pemisah antar bagian produk. Berguna untuk memisahkan visual antar kategori sehingga tampilan lebih rapi.
+
+---
+
+<img src="./images/readme-images/main-ourProducts2.png" alt="Struktur Body Care" width="900"/>
+
+## Tag yang digunakan
+
+1. `<body>`
+   Semua konten yang akan tampil ke user wajib ada di dalam `<body>`. Ini bagian inti yang dibaca browser untuk menampilkan halaman.
+
+2. `<!-- ... -->`
+   Komentar dipakai untuk memberi tanda antar bagian kode. Developer lain jadi mudah mengenali tiap segmen (contoh: “<!-- Body Care -->”).
+
+3. `<main>`
+   Dipakai supaya jelas bagian utama dari halaman ini adalah daftar produk Body Care. Memudahkan SEO dan aksesibilitas.
+
+4. `<header>`
+   Digunakan untuk menampilkan judul besar kategori. Memberi kesan pembuka yang terpisah dari isi daftar produk.
+
+5. `<h1>`
+   Supaya ada heading utama, “Body Care”. Membantu user langsung tahu halaman ini khusus produk perawatan tubuh.
+
+6. `<section>`
+   Untuk mengelompokkan produk jadi satu bagian kategori. Dengan ini, struktur kode lebih rapi dan mudah dipahami.
+
+7. `<h2>`
+   Subjudul dipakai untuk menandai nama produk tertentu. Dengan hierarki ini, user tahu urutan produk lebih jelas.
+
+8. `<img>`
+   Menampilkan gambar produk Body Care. Atribut `alt` dipakai untuk aksesibilitas, `width` mengatur ukuran supaya konsisten.
+
+9. `<p>`
+   Memberikan deskripsi tentang produk. Membuat user paham fungsi atau manfaat produk tanpa harus melihat detail lain.
+
+10. `<strong>`
+    Dipakai agar harga produk lebih menonjol. Membantu user langsung menangkap informasi penting.
+
+11. `<button>`
+    Memberi interaksi berupa aksi seperti “Lihat Produk” atau “Beli”. Elemen ini menambah fungsi praktis pada halaman.
+
+12. `<hr>`
+    Garis pemisah antar produk. Membuat tampilan halaman lebih rapi dan memisahkan tiap item dengan jelas.
 
 ---
