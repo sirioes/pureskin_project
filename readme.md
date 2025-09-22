@@ -94,19 +94,19 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<!DOCTYPE html>`  
-   Mendefinisikan bahwa dokumen menggunakan HTML5.
+   Mendefinisikan bahwa dokumen menggunakan HTML5, berfungsi agar browser tahu jika kita memakai HTML5.
 
 2. `<html lang="en">`  
-   Elemen utama HTML. Atribut `lang="en"` menunjukkan bahasa dokumen adalah bahasa Inggris.
+   Elemen utama HTML. Atribut `lang="en"` menunjukkan bahasa dokumen adalah bahasa Inggris. Bagian ini merupakan pembungkus utama semua kode HTML. `lang="en"` artinya bahasa halaman ini Inggris.
 
 3. `<head>`  
    Bagian kepala dokumen. Berisi informasi untuk browser, tidak tampil di halaman utama.
 
 4. `<meta charset="UTF-8">`  
-   Menentukan karakter encoding halaman agar semua huruf dan simbol bisa tampil dengan benar.
+   Menentukan karakter encoding halaman agar semua huruf dan simbol bisa tampil dengan benar, berfungsi agar huruf, angka, dan simbol bisa tampil dengan benar (termasuk karakter non-Inggris).
 
 5. `<meta name="viewport" content="width=device-width, initial-scale=1.0">`  
-   Mengatur halaman agar responsif di perangkat mobile, menyesuaikan dengan lebar layar.
+   Mengatur halaman agar responsif di perangkat mobile, menyesuaikan dengan lebar layar, berfungsi agar halaman web otomatis menyesuaikan ukuran layar (responsif di HP & laptop).
 
 6. `<title>Pureskin</title>`  
    Menentukan judul halaman yang muncul di tab browser.
@@ -121,32 +121,33 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<body>`  
-   Bagian utama halaman yang menampung seluruh konten yang terlihat di browser.
+   Karena semua konten utama website (teks, gambar, menu, form) ditampilkan di sini, menjadi bagian ini yang benar-benar kelihatan di browser.
 
 2. `<!-- Navbar -->`  
-   Komentar di dalam kode. Tidak ditampilkan di browser, hanya sebagai catatan untuk developer.
+   Dipakai hanya untuk catatan di dalam kode, berfungsi agar developer tahu bagian ini adalah navigasi, bagian ini tidak akan tampil di browser.
 
 3. `<nav>`  
-   Elemen semantik yang digunakan untuk menandai navigasi utama di halaman.
+   Berfungsi untuk menunjukan bahwa ini adalah menu navigasi utama dan juga membantu pembaca kode dan juga mesin pencari (SEO).
 
 4. `<ul>`  
-   Membuat daftar tidak berurutan (unordered list). Digunakan untuk menampung item navigasi.
+   Karena menu navigasi biasanya berupa daftar. `<ul>` digunakan untuk membuat daftar tanpa angka (unordered list).
 
 5. `<li>`  
-   Item di dalam list. Setiap menu navigasi ditempatkan dalam tag ini.
+   Digunakan untuk setiap item menu di navigasi, menjadi setiap menu (Homepage, About Us, dll) ditempatkan di dalam `<li>`.
 
 6. `<a href="..."> ... </a>`  
-   Membuat tautan (link). Atribut `href` berisi alamat file atau halaman yang dituju.  
-   - `Homepage.html` → Menu ke halaman utama  
-   - `AboutUs.html` → Menu ke halaman tentang  
-   - `OurProducts.html` → Menu ke halaman produk  
-   - `OurTreatments.html` → Menu ke halaman treatment  
+   Berfungsi agar setiap item menu bisa diklik dan menuju ke halaman lain. `href` menunjukkan ke mana link tersebut akan pergi.  
+   - `Homepage.html` → untuk ke halaman utama  
+   - `AboutUs.html` → untuk ke halaman tentang  
+   - `OurProducts.html` → untuk ke halaman produk  
+   - `OurTreatments.html` → untuk ke halaman treatment  
 
 7. `<hr>`  
-   Membuat garis horizontal sebagai pemisah antarbagian.
+   Untuk membuat garis pemisah antar bagian halaman biar lebih rapi dan mudah dibaca.
 
 8. `</body>`  
-   Menutup bagian utama halaman.
+   Menutup bagian utama halaman. Semua konten harus berada di dalamnya.
+
 
 ---
 
@@ -156,52 +157,50 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<body>`  
-   Bagian utama halaman yang menampung seluruh konten yang terlihat di browser.
+   Karena semua konten website yang ingin ditampilkan ke user harus ada di sini. Tanpa `<body>`, halaman akan kosong.
 
 2. `<!-- Main -->`  
-   Komentar. Tidak tampil di browser, hanya sebagai catatan untuk developer.
+   Berfungsi agar lebih rapi dan mudah dibaca oleh developer. Komentar ini membantu mengenali bagian "Main" tanpa memengaruhi tampilan.
 
 3. `<main>`  
-   Elemen semantik yang berisi konten utama dari halaman.
+   Dipakai agar jelas mana konten utama di halaman. Berguna untuk pembaca kode, mesin pencari, dan aksesibilitas.
 
 4. `<section>`  
-   Bagian konten yang dikelompokkan. Pada contoh ini digunakan untuk menampilkan layanan.
+   Untuk mengelompokkan konten menjadi satu bagian tertentu. Di sini bagian layanan dipisahkan agar lebih terstruktur.
 
 5. `<h2>`  
-   Judul utama dari bagian konten.  
+   Berfungsi agar ada judul besar yang menjelaskan isi section dan membuat user langsung tahu topik utamanya.  
    Contoh: "WHAT WE CAN DO FOR YOU".
 
 6. `<aside>`  
-   Bagian samping/pendukung. Dalam contoh ini digunakan untuk menampilkan daftar layanan.
+   Dipakai untuk menaruh konten pendukung/sampingan. Dalam hal ini daftar layanan ditampilkan sebagai pelengkap dari judul utama.
 
 7. `<ul>`  
-   Membuat daftar tidak berurutan (unordered list).
+   Karena daftar layanan lebih cocok ditampilkan sebagai list dan `<ul>` akan buat tampilan menjadi lebih rapi dan teratur.
 
 8. `<li>`  
-   Item dalam daftar. Setiap layanan ditaruh di dalam `<li>`.
+   Digunakan agar setiap layanan bisa dipisah satu per satu dan memudahkan pembacaan serta styling dengan CSS.
 
 9. `<h3>`  
-   Sub-judul untuk tiap layanan.  
-   Contoh: "Body Treatment", "Facial Treatment".
+   Untuk sub-judul tiap layanan, sehingga user bisa langsung tahu nama layanannya sebelum baca deskripsi.
 
 10. `<img src="..." alt="..." width="...">`  
-    Menampilkan gambar layanan.  
-    - `src` → lokasi file gambar  
-    - `alt` → teks alternatif jika gambar tidak muncul  
-    - `width` → ukuran lebar gambar  
+    Digunakan untuk menampilkan gambar layanan dan menambahkan visualisasi terhadap isi konten.  
+    - `src` → ambil gambar dari lokasi file.  
+    - `alt` → jaga-jaga kalau gambar gagal dimuat, tetap ada teks pengganti.  
+    - `width` → atur ukuran gambar agar konsisten.
 
 11. `<p>`  
-    Paragraf yang berisi deskripsi layanan.
+    Digunakan agar ada penjelasan singkat dalam bentuk paragraf sehingga user lebih paham tentang layanan yang ditawarkan.
 
 12. `<a href="..."> ... </a>`  
-    Tautan (link) untuk melihat detail lebih lanjut.  
-    Contoh: `href="OurTreatments.html"`
+    Digunakan agar user bisa klik dan masuk ke halaman detail layanan. Contoh: link ke `OurTreatments.html`.
 
 13. `</main>`  
-    Menutup bagian konten utama.
+    Berfungsi sebagai penutup bagian utama konten, biar strukturnya jelas dan tidak bercampur dengan elemen lain.
 
 14. `</body>`  
-    Menutup bagian utama halaman.
+    Berfungsi sebagai penutup bagian utama halaman web. Semua yang tampil di browser sudah selesai ditulis di dalamnya.
 
 ---
 
@@ -210,28 +209,28 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<section>`  
-   Bagian konten yang dikelompokkan. Pada contoh ini digunakan untuk menampilkan informasi produk.
+   Bagian ini digunakan agar bagian produk terpisah dan rapi, sehingga terlihat lebih jelas kalau ini khusus untuk menampilkan informasi produk.
 
 2. `<h2>`  
-   Judul utama dari bagian konten.  
+   Berfungsi agar ada judul besar yang langsung memberi tahu user topik utamanya.  
    Contoh: "BOOST YOUR SKIN WITH OUR PRODUCTS".
 
 3. `<img src="..." alt="..." width="...">`  
-   Menampilkan gambar produk.  
-   - `src` → lokasi file gambar  
-   - `alt` → teks alternatif jika gambar tidak muncul  
-   - `width` → ukuran lebar gambar  
+   Digunakan agar produk bisa dilihat dengan gambar, bukan cuma teks.  
+   - `src` → ambil gambar produk dari folder/file.  
+   - `alt` → kalau gambar gagal dimuat, tetap ada teks pengganti.  
+   - `width` → atur ukuran gambar biar tampilannya seragam.
 
 4. `<p>`  
-   Paragraf yang berisi deskripsi produk.  
-   Contoh: menjelaskan manfaat produk Pureskin untuk kulit.
+   Digunakan untuk menjelaskan gambaran umum mengenai produk yang disediakan.
 
 5. `<a href="..."> ... </a>`  
-   Tautan (link) untuk melihat detail lebih lanjut.  
-   Contoh: `href="OurProducts.html"`
+   Berfungsi agar user bisa klik dan masuk ke halaman detail produk.  
+   Contoh: link ke `OurProducts.html`.
 
 6. `</section>`  
-   Penutup bagian konten.
+   Sebagai penutup bagian produk agar strukturnya jelas dan tidak tercampur dengan bagian lain.
+
 
 ---
 
@@ -240,52 +239,55 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<main>`  
-   Elemen semantik untuk membungkus konten utama halaman.
+   Digunakan agar jelas mana konten utama di halaman, semua bagian penting ada disini.
 
 2. `<section id="book-consultation">`  
-   Bagian khusus untuk form konsultasi. Atribut `id` memudahkan pengaturan styling atau navigasi.
+   Digunakan agar bagian form konsultasi terpisah dari konten lain.  
+   `id="book-consultation"` digunakan agar memudahkan saat akan di-style dengan CSS atau dijadikan target link.
 
 3. `<h2>`  
-   Judul bagian.  
+   Untuk memberikan judul besar pada section ini, agar user langsung tahu ini bagian konsultasi.  
    Contoh: "Book Consultation".
 
 4. `<form>`  
-   Elemen utama untuk membuat form input dari pengguna.
+   Digunakan sebagai wadah utama untuk semua input pengguna. Semua isian (nama, email, pesan) ada di dalam tag ini.
 
 5. `<label for="..."> ... </label>`  
-   Label teks untuk tiap input. Atribut `for` dihubungkan dengan `id` pada input.  
-   - `for="nama"` → Label untuk input nama  
-   - `for="email"` → Label untuk input email  
-   - `for="pesan"` → Label untuk textarea pesan  
+   Berfungsi agar user tahu input ini untuk apa.  
+   Atribut `for` dihubungkan ke `id` input, sehingga form lebih ramah untuk aksesibilitas (misalnya screen reader).  
+   - `for="nama"` → label untuk input nama  
+   - `for="email"` → label untuk input email  
+   - `for="pesan"` → label untuk textarea pesan  
 
 6. `<input type="text" id="nama" name="nama">`  
-   Input teks untuk nama pengguna.  
-   - `type="text"` → input berupa teks biasa  
+   Untuk isian nama.  
+   `type="text"` → menerima teks biasa.
 
 7. `<input type="email" id="email" name="email">`  
-   Input khusus untuk email. Browser akan memvalidasi format email.  
+   Untuk isian email.  
+   `type="email"` → otomatis memvalidasi format email (misalnya harus ada @).
 
 8. `<textarea id="pesan" name="pesan"></textarea>`  
-   Kolom input untuk pesan dengan area lebih besar dibanding input teks.  
+   Dipakai pada saat user perlu menulis pesan panjang dan lebih fleksibel daripada input teks biasa.
 
 9. `<br>`  
-   Membuat baris baru agar elemen ditampilkan di bawah.  
+   Digunakan agar tampilan lebih rapi, dan setiap input selanjutnya akan turun ke baris baru.
 
 10. `<button type="submit">Kirim</button>`  
-    Tombol untuk mengirim data form.  
-    - `type="submit"` → mengirimkan data ke server (atau ke aksi form yang ditentukan).
+    Tombol untuk kirim form.  
+    `type="submit"` artinya saat diklik, form akan dikirim ke server/aksi yang ditentukan.
 
 11. `</form>`  
-    Penutup form. Semua input berada di dalam elemen ini.  
+    Merupakan bagian penutup form dan semua input harus ada di dalamnya.
 
 12. `</section>`  
-    Penutup bagian form konsultasi.  
+    Merupakan bagian penutup bagian konsultasi sehingga konten tetap terstruktur rapi.
 
 13. `</main>`  
-    Penutup konten utama halaman.  
+    Merupakan bagian penutup konten utama halaman.
 
 14. `<hr>`  
-    Membuat garis horizontal sebagai pemisah antarbagian.  
+    Digunakan agar ada garis pemisah, sehingga halaman lebih teratur dan bagian antar konten jelas.
 
 ---
 
@@ -294,25 +296,23 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<footer>`  
-   Elemen semantik untuk bagian bawah halaman. Biasanya berisi kontak, hak cipta, atau link kebijakan.
+   Dipakai untuk bagian bawah halaman web. Bagian ini akan berisi info penting seperti kontak, hak cipta, dan link kebijakan. Dengan tag ini, struktur halaman menjadi lebih jelas dan profesional.
 
 2. `<p>`  
-   Digunakan untuk membungkus teks atau elemen daftar kontak.  
-   Di dalamnya terdapat beberapa `<li>` (yang sebenarnya lebih tepat diletakkan dalam `<ul>` atau `<ol>`).
+   Digunakan untuk menampilkan teks dalam bentuk paragraf.  
+   Di sini dipakai untuk membungkus informasi kontak. 
 
 3. `<li>`  
-   Item daftar, digunakan untuk menampilkan informasi kontak:  
-   - WhatsApp: 0235-1661-6776  
-   - Instagram: pureskin  
-   - Email: pureskin@gmail.com  
+   Digunakan agar setiap informasi kontak (WhatsApp, Instagram, Email) bisa tampil rapi sebagai item terpisah sehingga memudahkan user membaca informasi.
 
 4. `&copy;`  
-   Entity HTML untuk simbol hak cipta (©).
+   Merupakan Entity HTML khusus yang pada program ini digunakan untuk menampilkan simbol hak cipta (©).  
+   Keuntungan dari penggunaan entity ini: akan tampil konsisten di semua browser.
 
 5. `<p>&copy; 2025 Pureskin. All rights reserved PRIVACY POLICY | TERMS & CONDITIONS</p>`  
-   Paragraf tambahan di footer yang berisi keterangan hak cipta dan link kebijakan.
+   Bagian ini akan memberikan info hak cipta sekaligus link ke kebijakan privasi dan syarat ketentuan, sehingga user tahu website ini resmi dan ada aturan jelasnya.
 
 6. `</footer>`  
-   Menutup bagian footer halaman.
+   Penutup dari bagian footer. Dengan ini, user paham kalau halaman sudah sampai bagian akhir.
 
 ---
