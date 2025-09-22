@@ -508,3 +508,69 @@ Halaman khusus untuk daftar layanan treatment.
     Garis pemisah antar produk. Membuat tampilan halaman lebih rapi dan memisahkan tiap item dengan jelas.
 
 ---
+
+`OurTreatments.html`
+
+<img src="./images/readme-images/main-ourTreatments.png" alt="Struktur Our Treatments" width="900"/>
+
+### Tag yang digunakan
+
+1. `<body>`
+   Semua konten layanan harus ditaruh di dalam `<body>`. Tanpanya, halaman tidak akan tampil.
+
+2. `<!-- ... -->`
+   Komentar dipakai agar kode lebih mudah dibaca developer. Misalnya `<!-- Our Treatments -->` menandakan awal konten layanan.
+
+3. `<main>`
+   Dipakai agar jelas bagian utama halaman adalah layanan yang ditawarkan. Penting untuk aksesibilitas dan SEO.
+
+4. `<h1>`
+   Heading utama yang langsung memberi tahu user bahwa halaman ini berisi “Our Treatments”.
+
+5. `<section>`
+   Mengelompokkan layanan jadi beberapa bagian tertentu. Dengan ini, tiap jenis layanan punya blok khusus.
+
+6. `<h2>`
+   Supaya ada judul besar yang menjelaskan tiap section layanan. Membantu user tahu topik utama tiap bagian.
+
+7. `<aside>`
+   Dipakai untuk menaruh konten sampingan atau pendukung. Dalam kasus ini, daftar layanan ditampilkan sebagai informasi tambahan.
+
+8. `<ul>`
+   Daftar layanan cocok ditampilkan dalam bentuk list. `<ul>` membuat struktur lebih rapi dan mudah dibaca.
+
+9. `<li>`
+   Setiap layanan bisa dijelaskan satu per satu. Memudahkan pembacaan, styling dengan CSS, dan aksesibilitas.
+
+---
+
+<img src="./images/readme-images/main-ourTreatments2.png" alt="Struktur Facial Treatment" width="900"/>
+
+### Tag yang digunakan
+
+1. `<body>`
+   Semua konten utama yang akan tampil ada di sini. Bagian ini jadi tempat menaruh struktur lengkap halaman.
+
+2. `<!-- ... -->`
+   Komentar digunakan untuk membagi bagian kode. Contohnya `<!-- Facial Treatment -->` membantu developer mengenali bagian layanan khusus wajah.
+
+3. `<main>`
+   Menandai konten utama halaman. Dalam hal ini, fokus pada layanan Facial Treatment.
+
+4. `<h1>`
+   Heading utama berisi judul besar. Membuat user langsung tahu halaman ini tentang layanan facial.
+
+5. `<section>`
+   Mengelompokkan layanan facial ke dalam satu area khusus. Dengan ini, lebih terstruktur dan mudah dipisahkan dengan layanan lain.
+
+6. `<h2>`
+   Dipakai untuk subjudul layanan. Misalnya “Deep Cleansing” atau “Brightening Facial”. Memudahkan user tahu jenis layanan.
+
+7. `<p>`
+   Memberi deskripsi singkat tiap layanan. Berguna untuk menjelaskan manfaat tanpa membuat tampilan terlalu penuh.
+
+8. `<strong>`
+   Dipakai untuk menegaskan harga layanan. Membuat harga langsung terlihat menonjol bagi user.
+
+9. `<button>`
+   Memberikan interaksi, misalnya tombol “Pesan Sekarang” atau “Detail Layanan”. Membantu konversi langsung dari halaman.
