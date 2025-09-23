@@ -419,50 +419,50 @@ Halaman khusus untuk daftar layanan treatment.
 
 ## Tag yang digunakan
 
-1. `<body>`
-   Karena semua konten website yang ingin ditampilkan ke user harus ada di sini. Tanpa `<body>`, browser tidak akan menampilkan apapun.
+1. `<body>`  
+   Digunakan untuk membungkus seluruh konten utama dari halaman web. Semua elemen yang akan ditampilkan ke pengguna berada di dalam tag ini, karena tanpa <body>, browser tidak tahu bagian mana yang harus ditampilkan
 
-2. `<!-- ... -->`
-   Supaya kode lebih rapi dan mudah dibaca oleh developer. Komentar ini membantu mengenali bagian tertentu (contoh: `<!-- Main -->`, `<!-- Face Care -->`).
+2. `<!-- ... -->`  
+   Digunakan agar kode lebih rapi dan mudah dibaca oleh developer dan bagian komentar ini juga membantu mengenali bagian tertentu (contoh: `<!-- Main -->`, `<!-- Face Care -->`).
 
-3. `<main>`
-   Dipakai agar jelas mana konten utama di halaman. Berguna untuk pembaca kode, mesin pencari (SEO), dan aksesibilitas.
+3. `<main>`  
+   Digunakan agar jelas mana konten utama di halaman dan juga berguna untuk pembaca kode, mesin pencari (SEO), dan aksesibilitas.
 
-4. `<header>`
-   Untuk menaruh judul utama dan deskripsi awal halaman. Ini memisahkan bagian pembuka dari isi konten produk.
+4. `<header>`  
+   Digunakan untuk menaruh judul utama dan deskripsi awal halaman dan tag ini memisahkan bagian pembuka dari isi konten produk.
 
-5. `<h1>`
-   Supaya ada judul besar yang menjelaskan isi halaman. Membuat user langsung tahu topik utama halaman, yaitu “Our Products”.
+5. `<h1>`  
+   Digunakan agar ada judul besar yang menjelaskan isi halaman dan membuat user langsung tahu topik utama halaman, yaitu "Our Products".
 
-6. `<p>`
-   Dipakai untuk teks deskriptif. Berguna menjelaskan informasi detail tentang produk dan manfaatnya agar lebih jelas untuk user.
+6. `<p>`  
+   Digunakan untuk menjelaskan informasi detail tentang produk dan manfaatnya, digunakan juga untuk memberikan deskripsi dari h1 "Our Products" agar lebih jelas untuk user.
 
-7. `<section>`
-   Untuk mengelompokkan konten jadi satu bagian tertentu. Di sini, bagian produk dipisahkan agar mudah dipahami dan dikelompokkan sesuai kategori.
+7. `<section>`  
+   Digunakan untuk mengelompokkan konten jadi satu bagian tertentu. 
 
-8. `<h2>`
-   Supaya ada subjudul yang menjelaskan tiap kategori. Membantu user tahu produk ini termasuk bagian “Face Care”.
+8. `<h2>`  
+   Digunakan agar ada subjudul yang menjelaskan tiap kategori dan membantu user untuk mengetahui produk yang ditampilkan termasuk bagian "Face Care".
 
-9. `<h3>`
-   Dipakai untuk nama produk spesifik. Dengan ini, struktur heading jelas: halaman (h1) → kategori (h2) → produk (h3).
+9. `<h3>`  
+   Digunakan untuk nama produk spesifik. Dengan penggunaan heading ini, struktur heading akan menjadi lebih jelas: halaman (h1) → kategori (h2) → produk (h3).
 
-10. `<img>`
-    Menampilkan gambar produk agar lebih menarik secara visual. Atribut `alt` dipakai untuk aksesibilitas & SEO, `width` mengatur ukuran gambar.
+10. `<img>`  
+   Digunakan untuk menampilkan gambar produk agar lebih menarik secara visual. Atribut `alt` dipakai untuk aksesibilitas & SEO, `width` mengatur ukuran gambar.
 
-11. `<br>`
-    Untuk membuat baris baru, sehingga teks lebih rapi tanpa perlu memulai paragraf baru.
+11. `<br>`  
+   Digunakan untuk membuat baris baru, sehingga teks lebih rapi tanpa perlu memulai paragraf baru.
 
-12. `<em>`
-    Memberikan penekanan (italic) pada teks, contohnya nama produk. Membuat teks lebih bervariasi tampilannya.
+12. `<em>`  
+   Digunakan untuk memberikan penekanan (italic) pada teks, contohnya nama produk. Sehingga akan membuat teks lebih bervariasi tampilannya.
 
-13. `<strong>`
-    Digunakan agar teks terlihat tebal. Biasanya dipakai untuk menegaskan harga supaya lebih menonjol.
+13. `<strong>`  
+   Digunakan agar teks terlihat tebal dan digunakan juga untuk menegaskan harga agar terlihat lebih menonjol.
 
-14. `<button>`
-    Memberikan interaksi ke user, contohnya tombol “Lihat Produk”. Dengan `type="submit"`, tombol ini bisa dipakai untuk aksi (misalnya form).
+14. `<button>`  
+   Digunakan untuk memberikan interaksi ke user, contohnya tombol "Lihat Produk". 
 
-15. `<hr>`
-    Membuat garis pemisah antar bagian produk. Berguna untuk memisahkan visual antar kategori sehingga tampilan lebih rapi.
+15. `<hr>`  
+   Digunakan untuk membuat garis pemisah antar bagian produk dan untuk memisahkan visual antar kategori sehingga tampilan lebih rapi.
 
 ---
 
@@ -470,41 +470,44 @@ Halaman khusus untuk daftar layanan treatment.
 
 ## Tag yang digunakan
 
-1. `<body>`
-   Semua konten yang akan tampil ke user wajib ada di dalam `<body>`. Ini bagian inti yang dibaca browser untuk menampilkan halaman.
+1. `<body>`  
+   Digunakan untuk membungkus seluruh konten utama dari halaman web. Semua elemen yang akan ditampilkan ke pengguna berada di dalam tag ini, karena tanpa , browser tidak tahu bagian mana yang harus ditampilkan.
 
-2. `<!-- ... -->`
-   Komentar dipakai untuk memberi tanda antar bagian kode. Developer lain jadi mudah mengenali tiap segmen (contoh: “<!-- Body Care -->”).
+2. `<!-- ... -->`  
+   Digunakan agar kode lebih rapi dan mudah dibaca oleh developer dan bagian komentar ini juga membantu mengenali bagian tertentu (contoh: <!-- Main -->, <!-- Body Care -->)..
 
-3. `<main>`
-   Dipakai supaya jelas bagian utama dari halaman ini adalah daftar produk Body Care. Memudahkan SEO dan aksesibilitas.
+3. `<main>`  
+   Digunakan agar jelas mana konten utama di halaman dan juga berguna untuk pembaca kode, mesin pencari (SEO), dan aksesibilitas.
 
-4. `<header>`
-   Digunakan untuk menampilkan judul besar kategori. Memberi kesan pembuka yang terpisah dari isi daftar produk.
+4. `<section>`  
+   Digunakan untuk mengelompokkan produk jadi satu bagian kategori. Dengan ini, struktur kode lebih rapi dan mudah dipahami.
 
-5. `<h1>`
-   Supaya ada heading utama, “Body Care”. Membantu user langsung tahu halaman ini khusus produk perawatan tubuh.
-
-6. `<section>`
-   Untuk mengelompokkan produk jadi satu bagian kategori. Dengan ini, struktur kode lebih rapi dan mudah dipahami.
-
-7. `<h2>`
+5. `<h2>`  
    Subjudul dipakai untuk menandai nama produk tertentu. Dengan hierarki ini, user tahu urutan produk lebih jelas.
 
-8. `<img>`
-   Menampilkan gambar produk Body Care. Atribut `alt` dipakai untuk aksesibilitas, `width` mengatur ukuran supaya konsisten.
+6. `<h3>`  
+   Digunakan untuk nama produk spesifik. Dengan penggunaan heading ini, struktur heading akan menjadi lebih jelas: halaman (h1) → kategori (h2) → produk (h3).
 
-9. `<p>`
-   Memberikan deskripsi tentang produk. Membuat user paham fungsi atau manfaat produk tanpa harus melihat detail lain.
+7. `<img>`  
+   Digunakan untuk menampilkan gambar produk Body Care. Atribut `alt` dipakai untuk aksesibilitas, `width` mengatur ukuran supaya konsisten.
 
-10. `<strong>`
-    Dipakai agar harga produk lebih menonjol. Membantu user langsung menangkap informasi penting.
+8. `<p>`  
+   Digunakan untuk memberikan deskripsi tentang produk dan membuat user paham fungsi atau manfaat produk tanpa harus melihat detail lain.
 
-11. `<button>`
-    Memberi interaksi berupa aksi seperti “Lihat Produk” atau “Beli”. Elemen ini menambah fungsi praktis pada halaman.
+9. `<br>`  
+   Digunakan untuk membuat baris baru, sehingga teks lebih rapi tanpa perlu memulai paragraf baru.
 
-12. `<hr>`
-    Garis pemisah antar produk. Membuat tampilan halaman lebih rapi dan memisahkan tiap item dengan jelas.
+10. `<em>`  
+   Digunakan untuk memberikan penekanan (italic) pada teks, contohnya nama produk. Sehingga akan membuat teks lebih bervariasi tampilannya.
+
+11. `<strong>`  
+   Dipakai agar harga produk lebih menonjol dan membantu user langsung menangkap informasi penting.
+
+12. `<button>`  
+   Digunakan untuk memberi interaksi berupa aksi seperti "Lihat Produk". Elemen ini menambah fungsi praktis pada halaman.
+
+13. `<hr>`  
+   Digunakan sebagai garis pemisah antar produk dan memmbuat tampilan halaman lebih rapi dan memisahkan tiap item dengan jelas.
 
 ---
 
@@ -512,70 +515,70 @@ Halaman khusus untuk daftar layanan treatment.
 
 <img src="./images/readme-images/main-ourTreatments.png" alt="Struktur Our Treatments" width="900"/>
 
-### Tag yang digunakan
+## Tag yang digunakan
 
-1. `<body>`
+1. `<body>`  
    Semua konten layanan harus ditaruh di dalam `<body>`. Tanpanya, halaman tidak akan tampil.
 
-2. `<!-- ... -->`
+2. `<!-- ... -->`  
    Komentar dipakai agar kode lebih mudah dibaca developer. Misalnya `<!-- Our Treatments -->` menandakan awal konten layanan.
 
-3. `<main>`
+3. `<main>`  
    Dipakai agar jelas bagian utama halaman adalah layanan yang ditawarkan. Penting untuk aksesibilitas dan SEO.
 
-4. `<h1>`
+4. `<h1>`  
    Heading utama yang langsung memberi tahu user bahwa halaman ini berisi “Our Treatments”.
 
-5. `<section>`
+5. `<section>`  
    Mengelompokkan layanan jadi beberapa bagian tertentu. Dengan ini, tiap jenis layanan punya blok khusus.
 
-6. `<h2>`
+6. `<h2>`  
    Supaya ada judul besar yang menjelaskan tiap section layanan. Membantu user tahu topik utama tiap bagian.
 
-7. `<aside>`
+7. `<aside>`  
    Dipakai untuk menaruh konten sampingan atau pendukung. Dalam kasus ini, daftar layanan ditampilkan sebagai informasi tambahan.
 
-8. `<ul>`
+8. `<ul>`  
    Daftar layanan cocok ditampilkan dalam bentuk list. `<ul>` membuat struktur lebih rapi dan mudah dibaca.
 
-9. `<li>`
+9. `<li>`  
    Setiap layanan bisa dijelaskan satu per satu. Memudahkan pembacaan, styling dengan CSS, dan aksesibilitas.
 
----
 
 <img src="./images/readme-images/main-ourTreatments2.png" alt="Struktur Facial Treatment" width="900"/>
 
-### Tag yang digunakan
+## Tag yang digunakan
 
-1. `<body>`
+1. `<body>`  
    Semua konten utama yang akan tampil ada di sini. Bagian ini jadi tempat menaruh struktur lengkap halaman.
 
-2. `<!-- ... -->`
+2. `<!-- ... -->`  
    Komentar digunakan untuk membagi bagian kode. Contohnya `<!-- Facial Treatment -->` membantu developer mengenali bagian layanan khusus wajah.
 
-3. `<main>`
+3. `<main>`  
    Menandai konten utama halaman. Dalam hal ini, fokus pada layanan Facial Treatment.
 
-4. `<h1>`
+4. `<h1>`  
    Heading utama berisi judul besar. Membuat user langsung tahu halaman ini tentang layanan facial.
 
-5. `<section>`
+5. `<section>`  
    Mengelompokkan layanan facial ke dalam satu area khusus. Dengan ini, lebih terstruktur dan mudah dipisahkan dengan layanan lain.
 
-6. `<h2>`
+6. `<h2>`  
    Dipakai untuk subjudul layanan. Misalnya “Deep Cleansing” atau “Brightening Facial”. Memudahkan user tahu jenis layanan.
 
-7. `<p>`
+7. `<p>`  
    Memberi deskripsi singkat tiap layanan. Berguna untuk menjelaskan manfaat tanpa membuat tampilan terlalu penuh.
 
-8. `<strong>`
+8. `<strong>`  
    Dipakai untuk menegaskan harga layanan. Membuat harga langsung terlihat menonjol bagi user.
 
-9. `<button>`
+9. `<button>`  
    Memberikan interaksi, misalnya tombol “Pesan Sekarang” atau “Detail Layanan”. Membantu konversi langsung dari halaman.
 
 ---
-## Hasil Kode Program
+
+# Hasil Kode Program
 
 `Homepage.html`
 
