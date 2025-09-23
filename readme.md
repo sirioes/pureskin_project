@@ -578,6 +578,17 @@ Halaman khusus untuk daftar layanan treatment.
 ---
 ## Hasil Kode Program
 
+`Homepage.html`
+
+<img src="./images/readme-images/hasil-kode-program/homepage1.png" alt="Tampilan Halaman Homepage - Bagian 1" width="900"/>
+
+<img src="./images/readme-images/hasil-kode-program/homepage2.png" alt="Tampilan Halaman Homepage - Bagian 2" width="900"/>
+
+<img src="./images/readme-images/hasil-kode-program/homepage3.png" alt="Tampilan Halaman Homepage - Bagian 3" width="900"/>
+
+---
+---
+
 `AboutUs.html`
 
 <img src="./images/readme-images/hasil-kode-program/aboutUs1.png" alt="Tampilan Halaman About Us - Bagian 1" width="900"/>
