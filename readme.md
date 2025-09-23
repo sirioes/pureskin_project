@@ -94,25 +94,25 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<!DOCTYPE html>`  
-   Mendefinisikan bahwa dokumen menggunakan HTML5, berfungsi agar browser tahu jika kita memakai HTML5.
+   Bagian ini digunakan untuk mendefinisikan bahwa dokumen menggunakan HTML5, dan berfungsi agar browser tahu jika kita memakai HTML5.
 
 2. `<html lang="en">`  
-   Elemen utama HTML. Atribut `lang="en"` menunjukkan bahasa dokumen adalah bahasa Inggris. Bagian ini merupakan pembungkus utama semua kode HTML. `lang="en"` artinya bahasa halaman ini Inggris.
+   Bagian ini merupakan elemen utama HTML. Atribut `lang="en"` menunjukkan bahasa dokumen adalah bahasa Inggris. Bagian ini merupakan pembungkus utama semua kode HTML. `lang="en"` artinya bahasa halaman ini Inggris.
 
 3. `<head>`  
-   Bagian kepala dokumen. Berisi informasi untuk browser, tidak tampil di halaman utama.
+   Bagian merupakan bagian kepala dokumen dan berisi informasi untuk browser, tetapi tidak tampil di halaman utama.
 
 4. `<meta charset="UTF-8">`  
-   Menentukan karakter encoding halaman agar semua huruf dan simbol bisa tampil dengan benar, berfungsi agar huruf, angka, dan simbol bisa tampil dengan benar (termasuk karakter non-Inggris).
+   Bagian ini berfungsi untuk menentukan karakter encoding halaman agar semua huruf dan simbol bisa tampil dengan benar, dan berfungsi agar huruf, angka, dan simbol bisa tampil dengan benar (termasuk karakter non-Inggris).
 
 5. `<meta name="viewport" content="width=device-width, initial-scale=1.0">`  
-   Mengatur halaman agar responsif di perangkat mobile, menyesuaikan dengan lebar layar, berfungsi agar halaman web otomatis menyesuaikan ukuran layar (responsif di HP & laptop).
+   Bagian ini berfungsi untuk mengatur halaman agar responsif di perangkat mobile, menyesuaikan dengan lebar layar, dan berfungsi agar halaman web otomatis menyesuaikan ukuran layar (responsif di HP & laptop).
 
 6. `<title>Pureskin</title>`  
-   Menentukan judul halaman yang muncul di tab browser.
+   Bagian ini digunakan untuk menentukan judul halaman yang muncul di tab browser.
 
 7. `</head>`  
-   Penutup bagian kepala dokumen.
+   Bagian ini merupakan penutup bagian kepala dokumen.
 
 ---
 
@@ -121,32 +121,32 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<body>`  
-   Karena semua konten utama website (teks, gambar, menu, form) ditampilkan di sini, menjadi bagian ini yang benar-benar kelihatan di browser.
+   Karena semua konten utama website (teks, gambar, menu, form) ditampilkan di sini, jadi bagian ini yang benar-benar terlihat di browser.
 
 2. `<!-- Navbar -->`  
-   Dipakai hanya untuk catatan di dalam kode, berfungsi agar developer tahu bagian ini adalah navigasi, bagian ini tidak akan tampil di browser.
+   Digunakan sebagai tempat untuk memberikan catatan di dalam kode, berfungsi agar developer tahu bagian ini adalah navigasi, bagian ini tidak akan tampil di browser.
 
-3. `<nav>`  
+3. `<nav>...</nav>`  
    Berfungsi untuk menunjukan bahwa ini adalah menu navigasi utama dan juga membantu pembaca kode dan juga mesin pencari (SEO).
 
-4. `<ul>`  
+4. `<ul>...</ul>`  
    Karena menu navigasi biasanya berupa daftar. `<ul>` digunakan untuk membuat daftar tanpa angka (unordered list).
 
-5. `<li>`  
-   Digunakan untuk setiap item menu di navigasi, menjadi setiap menu (Homepage, About Us, dll) ditempatkan di dalam `<li>`.
+5. `<li>...</li>`  
+   Digunakan untuk setiap item menu di navigasi, jadi setiap menu (Homepage, About Us, dll) ditempatkan di dalam `<li>`.
 
 6. `<a href="..."> ... </a>`  
-   Berfungsi agar setiap item menu bisa diklik dan menuju ke halaman lain. `href` menunjukkan ke mana link tersebut akan pergi.  
+   Digunakan agar setiap item menu bisa diklik dan menuju ke halaman lain. `href` menunjukkan ke mana link tersebut akan pergi.  
    - `Homepage.html` → untuk ke halaman utama  
    - `AboutUs.html` → untuk ke halaman tentang  
    - `OurProducts.html` → untuk ke halaman produk  
    - `OurTreatments.html` → untuk ke halaman treatment  
 
 7. `<hr>`  
-   Untuk membuat garis pemisah antar bagian halaman biar lebih rapi dan mudah dibaca.
+   Digunakan agar ada garis pemisah antar bagian halaman sehingga halaman menjadi lebih rapi dan mudah dibaca.
 
 8. `</body>`  
-   Menutup bagian utama halaman. Semua konten harus berada di dalamnya.
+   Digunakan sebagai penutup bagian utama halaman. Semua konten harus berada di dalamnya.
 
 
 ---
@@ -160,37 +160,37 @@ Halaman khusus untuk daftar layanan treatment.
    Karena semua konten website yang ingin ditampilkan ke user harus ada di sini. Tanpa `<body>`, halaman akan kosong.
 
 2. `<!-- Main -->`  
-   Berfungsi agar lebih rapi dan mudah dibaca oleh developer. Komentar ini membantu mengenali bagian "Main" tanpa memengaruhi tampilan.
+   Digunakan untuk memberikan catatan sehingga kode program menjadi lebih rapi dan mudah dibaca oleh developer. Komentar ini membantu mengenali bagian "Main" tanpa memengaruhi tampilan.
 
 3. `<main>`  
    Dipakai agar jelas mana konten utama di halaman. Berguna untuk pembaca kode, mesin pencari, dan aksesibilitas.
 
-4. `<section>`  
-   Untuk mengelompokkan konten menjadi satu bagian tertentu. Di sini bagian layanan dipisahkan agar lebih terstruktur.
+4. `<section>...</section>`  
+   Digunakan agar mudah untuk mengelompokkan konten menjadi satu bagian tertentu. Di sini bagian layanan dipisahkan agar lebih terstruktur.
 
-5. `<h2>`  
-   Berfungsi agar ada judul besar yang menjelaskan isi section dan membuat user langsung tahu topik utamanya.  
+5. `<h2>...</h2>`  
+   Digunakan agar ada judul besar yang menjelaskan isi section dan membuat user langsung tahu topik utamanya.  
    Contoh: "WHAT WE CAN DO FOR YOU".
 
-6. `<aside>`  
-   Dipakai untuk menaruh konten pendukung/sampingan. Dalam hal ini daftar layanan ditampilkan sebagai pelengkap dari judul utama.
+6. `<aside>...</aside>`  
+   Dipakai untuk menaruh konten pendukung/sampingan yang dalam hal ini termasuk daftar layanan yang ditampilkan sebagai pelengkap dari judul utama.
 
-7. `<ul>`  
+7. `<ul>...</ul>`  
    Karena daftar layanan lebih cocok ditampilkan sebagai list dan `<ul>` akan buat tampilan menjadi lebih rapi dan teratur.
 
-8. `<li>`  
+8. `<li>...</li>`  
    Digunakan agar setiap layanan bisa dipisah satu per satu dan memudahkan pembacaan serta styling dengan CSS.
 
-9. `<h3>`  
-   Untuk sub-judul tiap layanan, sehingga user bisa langsung tahu nama layanannya sebelum baca deskripsi.
+9. `<h3>...</h3>`  
+   Digunakan untuk sub-judul tiap layanan, sehingga user bisa langsung tahu nama layanannya sebelum baca deskripsi.
 
 10. `<img src="..." alt="..." width="...">`  
     Digunakan untuk menampilkan gambar layanan dan menambahkan visualisasi terhadap isi konten.  
     - `src` → ambil gambar dari lokasi file.  
     - `alt` → jaga-jaga kalau gambar gagal dimuat, tetap ada teks pengganti.  
-    - `width` → atur ukuran gambar agar konsisten.
+    - `width` → digunakan untuk mengatur ukuran gambar agar konsisten.
 
-11. `<p>`  
+11. `<p>...</p>`  
     Digunakan agar ada penjelasan singkat dalam bentuk paragraf sehingga user lebih paham tentang layanan yang ditawarkan.
 
 12. `<a href="..."> ... </a>`  
@@ -211,7 +211,7 @@ Halaman khusus untuk daftar layanan treatment.
 1. `<section>`  
    Bagian ini digunakan agar bagian produk terpisah dan rapi, sehingga terlihat lebih jelas kalau ini khusus untuk menampilkan informasi produk.
 
-2. `<h2>`  
+2. `<h2>...</h2>`  
    Berfungsi agar ada judul besar yang langsung memberi tahu user topik utamanya.  
    Contoh: "BOOST YOUR SKIN WITH OUR PRODUCTS".
 
@@ -219,9 +219,9 @@ Halaman khusus untuk daftar layanan treatment.
    Digunakan agar produk bisa dilihat dengan gambar, bukan cuma teks.  
    - `src` → ambil gambar produk dari folder/file.  
    - `alt` → kalau gambar gagal dimuat, tetap ada teks pengganti.  
-   - `width` → atur ukuran gambar biar tampilannya seragam.
+   - `width` → digunakan untuk mengatur ukuran gambar agar tampilannya konsisten.
 
-4. `<p>`  
+4. `<p>...</p>`  
    Digunakan untuk menjelaskan gambaran umum mengenai produk yang disediakan.
 
 5. `<a href="..."> ... </a>`  
@@ -245,8 +245,8 @@ Halaman khusus untuk daftar layanan treatment.
    Digunakan agar bagian form konsultasi terpisah dari konten lain.  
    `id="book-consultation"` digunakan agar memudahkan saat akan di-style dengan CSS atau dijadikan target link.
 
-3. `<h2>`  
-   Untuk memberikan judul besar pada section ini, agar user langsung tahu ini bagian konsultasi.  
+3. `<h2>...</h2>`  
+   Digunakan untuk memberikan judul besar pada section ini, agar user langsung tahu ini adalah bagian "konsultasi".  
    Contoh: "Book Consultation".
 
 4. `<form>`  
@@ -298,11 +298,11 @@ Halaman khusus untuk daftar layanan treatment.
 1. `<footer>`  
    Dipakai untuk bagian bawah halaman web. Bagian ini akan berisi info penting seperti kontak, hak cipta, dan link kebijakan. Dengan tag ini, struktur halaman menjadi lebih jelas dan profesional.
 
-2. `<p>`  
+2. `<p>...</p>`  
    Digunakan untuk menampilkan teks dalam bentuk paragraf.  
    Di sini dipakai untuk membungkus informasi kontak. 
 
-3. `<li>`  
+3. `<li>...</li>`  
    Digunakan agar setiap informasi kontak (WhatsApp, Instagram, Email) bisa tampil rapi sebagai item terpisah sehingga memudahkan user membaca informasi.
 
 4. `&copy;`  
@@ -615,5 +615,6 @@ Halaman khusus untuk daftar layanan treatment.
 
 <img src="./images/readme-images/hasil-kode-program/ourTreatments2.png" alt="Tampilan Halaman Our Treatments - Bagian 2" width="900"/>
 
+---
 
 
