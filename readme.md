@@ -121,7 +121,7 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<body>`  
-   Karena semua konten utama website (teks, gambar, menu, form) ditampilkan di sini, jadi bagian ini yang benar-benar terlihat di browser.
+   Digunakan untuk membungkus seluruh konten utama dari halaman web, Jadi semua elemen yang ingin ditampilkan ke pengguna, seperti teks, gambar, dan tombol, berada di dalam tag ini.
 
 2. `<!-- Navbar -->`  
    Digunakan sebagai tempat untuk memberikan catatan di dalam kode, berfungsi agar developer tahu bagian ini adalah navigasi, bagian ini tidak akan tampil di browser.
@@ -148,7 +148,32 @@ Halaman khusus untuk daftar layanan treatment.
 8. `</body>`  
    Digunakan sebagai penutup bagian utama halaman. Semua konten harus berada di dalamnya.
 
+---
 
+<img src="./images/readme-images/header-homepage.png" alt="Struktur Dasar HTML" width="900"/>
+
+## Tag yang digunakan
+
+1. `<body>`  
+   Digunakan untuk membungkus seluruh konten utama dari halaman web, jadi semua elemen yang ingin ditampilkan ke pengguna, seperti teks, gambar, dan tombol, berada di dalam tag ini.
+
+2. `<header>`  
+   Digunakan untuk membungkus bagian kepala atau pengantar halaman. Dalam kode ini, `<header>` berfungsi menampilkan nama brand **PURESKIN**, deskripsi singkat, dan tombol untuk booking appointment.
+
+3. `<h1>`  
+   Tag heading terbesar yang dipakai untuk judul utama pada halaman. Di sini, `<h1>` menampilkan teks **"PURESKIN"** sebagai identitas utama website, sehingga jelas dan mudah dikenali.
+
+4. `<p>`  
+   Digunakan untuk menuliskan teks dalam bentuk paragraf. Pada kode ini, paragraf menjelaskan profil singkat **Pureskin** sebagai klinik kecantikan, layanan yang diberikan, serta komitmen terhadap pelanggan.
+
+5. `<a>`  
+   Tag anchor yang digunakan untuk membuat hyperlink. Pada kode ini, `<a href="#book-consultation">` menghubungkan pengguna ke bagian lain dari halaman (scroll ke section dengan id `book-consultation`).
+
+6. `<button>`  
+   Digunakan untuk membuat tombol yang bisa diklik oleh pengguna. Di sini, tombol bertuliskan **"Book Appointment"** yang ditempatkan di dalam tag `<a>` agar bisa langsung mengarahkan pengguna ke halaman atau section tujuan.
+
+7. `</...>` (closing tag)  
+   Setiap elemen HTML perlu ditutup agar struktur kode jelas dan tidak error. Misalnya `</h1>`, `</p>`, `</a>`, `</header>`, dan `</body>`. Penutup ini penting supaya browser tahu di mana elemen tersebut berakhir.
 ---
 
 <img src="./images/readme-images/main1-homepage.png" alt="Struktur Dasar HTML" width="900"/>
