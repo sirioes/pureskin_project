@@ -518,63 +518,55 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<body>`  
-   Semua konten layanan harus ditaruh di dalam `<body>`. Tanpanya, halaman tidak akan tampil.
+   Digunakan untuk membungkus seluruh konten utama dari halaman web. Semua elemen yang akan ditampilkan ke pengguna berada di dalam tag ini, karena tanpa , browser tidak tahu bagian mana yang harus ditampilkan.
 
 2. `<!-- ... -->`  
-   Komentar dipakai agar kode lebih mudah dibaca developer. Misalnya `<!-- Our Treatments -->` menandakan awal konten layanan.
+   Digunakan agar kode lebih rapi dan mudah dibaca oleh developer dan bagian komentar ini juga membantu mengenali bagian tertentu (contoh: <!-- Our Treatments -->).
 
 3. `<main>`  
-   Dipakai agar jelas bagian utama halaman adalah layanan yang ditawarkan. Penting untuk aksesibilitas dan SEO.
+   Digunakan agar jelas mana konten utama di halaman dan juga berguna untuk pembaca kode, mesin pencari (SEO), dan aksesibilitas.
 
-4. `<h1>`  
-   Heading utama yang langsung memberi tahu user bahwa halaman ini berisi “Our Treatments”.
+4. `<header>`  
+   Digunakan untuk menaruh judul utama dan deskripsi awal halaman dan tag ini memisahkan bagian pembuka dari isi konten produk.
+
+5. `<h1>`  
+   Digunakan untuk memberikan keterangan heading utama yang langsung memberi tahu user bahwa halaman ini berisi "Our Treatments".
+
+6. `<p>`  
+   Digunakan untuk memberikan deskripsi tentang produk dan membuat user paham fungsi atau manfaat produk tanpa harus melihat detail lain.
 
 5. `<section>`  
-   Mengelompokkan layanan jadi beberapa bagian tertentu. Dengan ini, tiap jenis layanan punya blok khusus.
+   Digunakan untuk mengelompokkan layanan jadi beberapa bagian tertentu. Dengan penggunaan bagian ini ini, setiap jenis layanan akan memiliki blok khusus.
 
 6. `<h2>`  
-   Supaya ada judul besar yang menjelaskan tiap section layanan. Membantu user tahu topik utama tiap bagian.
+   Digunakan untuk memberikan judul besar yang menjelaskan tiap section layanan dan membantu user tahu topik utama tiap bagian.
 
-7. `<aside>`  
-   Dipakai untuk menaruh konten sampingan atau pendukung. Dalam kasus ini, daftar layanan ditampilkan sebagai informasi tambahan.
+7. `<img>`  
+   Digunakan untuk menampilkan gambar layanan yang disediakan Pureskin. Atribut `alt` dipakai untuk aksesibilitas, `width` mengatur ukuran supaya konsisten.
 
-8. `<ul>`  
-   Daftar layanan cocok ditampilkan dalam bentuk list. `<ul>` membuat struktur lebih rapi dan mudah dibaca.
-
-9. `<li>`  
-   Setiap layanan bisa dijelaskan satu per satu. Memudahkan pembacaan, styling dengan CSS, dan aksesibilitas.
-
+---
 
 <img src="./images/readme-images/main-ourTreatments2.png" alt="Struktur Facial Treatment" width="900"/>
 
 ## Tag yang digunakan
 
 1. `<body>`  
-   Semua konten utama yang akan tampil ada di sini. Bagian ini jadi tempat menaruh struktur lengkap halaman.
+   Digunakan sebagai tempat untuk semua konten utama yang akan tampil ada di sini. 
 
-2. `<!-- ... -->`  
-   Komentar digunakan untuk membagi bagian kode. Contohnya `<!-- Facial Treatment -->` membantu developer mengenali bagian layanan khusus wajah.
+2. `<main>`  
+   Digunakan untuk menandai konten utama halaman dan dalam hal ini, fokus pada layanan Facial Treatment.
 
-3. `<main>`  
-   Menandai konten utama halaman. Dalam hal ini, fokus pada layanan Facial Treatment.
+4. `<section>`  
+   Digunakan untuk mengelompokkan layanan facial ke dalam satu area khusus dan dengan menggunakan elemen semantic ini, kode program akan lebih terstruktur dan mudah dipisahkan dengan layanan lain.
 
-4. `<h1>`  
-   Heading utama berisi judul besar. Membuat user langsung tahu halaman ini tentang layanan facial.
+5. `<h2>`  
+   Dipakai untuk subjudul layanan, misalnya "Facial Treatment". 
 
-5. `<section>`  
-   Mengelompokkan layanan facial ke dalam satu area khusus. Dengan ini, lebih terstruktur dan mudah dipisahkan dengan layanan lain.
-
-6. `<h2>`  
-   Dipakai untuk subjudul layanan. Misalnya “Deep Cleansing” atau “Brightening Facial”. Memudahkan user tahu jenis layanan.
+6. `<img>`  
+   Digunakan untuk menampilkan gambar layanan yang disediakan Pureskin. Atribut `alt` dipakai untuk aksesibilitas, `width` mengatur ukuran supaya konsisten.
 
 7. `<p>`  
-   Memberi deskripsi singkat tiap layanan. Berguna untuk menjelaskan manfaat tanpa membuat tampilan terlalu penuh.
-
-8. `<strong>`  
-   Dipakai untuk menegaskan harga layanan. Membuat harga langsung terlihat menonjol bagi user.
-
-9. `<button>`  
-   Memberikan interaksi, misalnya tombol “Pesan Sekarang” atau “Detail Layanan”. Membantu konversi langsung dari halaman.
+   Digunakan untuk memberikan deskripsi singkat tiap layanan dan juga berguna untuk menjelaskan manfaat tanpa membuat tampilan terlalu penuh.
 
 ---
 
