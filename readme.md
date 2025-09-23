@@ -324,8 +324,7 @@ Halaman khusus untuk daftar layanan treatment.
 ## Tag yang digunakan
 
 1. `<body>`  
-   Digunakan untuk membungkus seluruh konten utama dari halaman web. Semua elemen yang akan ditampilkan ke pengguna berada di dalam tag ini.  
-   Karena tanpa `<body>`, browser tidak tahu bagian mana yang harus ditampilkan
+   Digunakan untuk membungkus seluruh konten utama dari halaman web. Semua elemen yang akan ditampilkan ke pengguna berada di dalam tag ini, karena tanpa `<body>`, browser tidak tahu bagian mana yang harus ditampilkan
 
 2. `<main>`  
    Digunakan untuk menandai bagian konten utama dari sebuah halaman web.  
@@ -338,8 +337,8 @@ Halaman khusus untuk daftar layanan treatment.
 
 
 4. `<h1>`  
-   Tag heading terbesar untuk judul utama.  
-   Di sini dipakai untuk menampilkan teks **"About Us"** agar jelas bahwa halaman ini adalah bagian tentang perusahaan. Juga penting untuk SEO dan hierarki konten.
+   Tag heading terbesar yang digunakan untuk judul utama.  
+   Di sini dipakai untuk menampilkan teks **"About Us"** agar jelas bahwa halaman ini adalah bagian tentang perusahaan dan juga penting untuk SEO dan hierarki konten.
 
 
 5. `<section>`  
@@ -355,7 +354,7 @@ Halaman khusus untuk daftar layanan treatment.
 
 7. `<br>`  
    Digunakan untuk membuat jarak atau pindah baris antar paragraf.  
-   Pada kode ini dipakai untuk memberi spasi tambahan di antara paragraf. Namun, lebih baik menggunakan CSS untuk mengatur jarak agar lebih fleksibel.
+   Pada program ini, kode ini dipakai untuk memberi spasi tambahan di antara paragraf. Namun, lebih baik menggunakan CSS untuk mengatur jarak agar lebih fleksibel.
 
 8. `</...>` (closing tag)  
    Hampir semua elemen memiliki penutup seperti `</main>`, `</header>`, `</section>`, `</p>`.  
