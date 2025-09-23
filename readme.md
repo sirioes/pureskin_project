@@ -574,3 +574,12 @@ Halaman khusus untuk daftar layanan treatment.
 
 9. `<button>`
    Memberikan interaksi, misalnya tombol “Pesan Sekarang” atau “Detail Layanan”. Membantu konversi langsung dari halaman.
+
+---
+## Hasil Kode Program
+
+`AboutUs.html`
+
+<img src="./images/readme-images/hasil-kode-program/aboutUs1.png" alt="Tampilan Halaman About Us - Bagian 1" width="900"/>
+
+<img src="./images/readme-images/hasil-kode-program/aboutUs2.png" alt="Tampilan Halaman About Us - Bagian 2" width="900"/>
