@@ -595,3 +595,14 @@ Halaman khusus untuk daftar layanan treatment.
 
 <img src="./images/readme-images/hasil-kode-program/ourProducts3.png" alt="Tampilan Halaman Our Products - Bagian 3" width="900"/>
 
+---
+---
+
+`OurTreatments.html`
+
+<img src="./images/readme-images/hasil-kode-program/ourTreatments1.png" alt="Tampilan Halaman Our Treatments - Bagian 1" width="900"/>
+
+<img src="./images/readme-images/hasil-kode-program/ourTreatments2.png" alt="Tampilan Halaman Our Treatments - Bagian 2" width="900"/>
+
+
+
