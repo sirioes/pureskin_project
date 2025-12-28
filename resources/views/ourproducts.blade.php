@@ -303,6 +303,135 @@
                 <div class="swiper-button-next w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
             </div>
         </section>
+
+        <section class="mt-12">
+            <div class="justify-items-left">
+                <h2 class="ml-1 md:ml-8 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Best Sellers: "The Hall of Fame"</h2>
+                <p class="ml-5 md:ml-15 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Temukan kurasi produk favorit sejuta umat yang telah teruji secara nyata menjadi rahasia kulit impian banyak orang.</p>
+            </div>
+
+            <div class="swiper mySwiper relative px-12">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-seller/brightening-body-wash.jpg') }}" alt="Brightening Body Wash" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Brightening Body Wash</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp47.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-seller/instant-white-body-lotion-day.jpg') }}" alt="Instant White Body Lotion Day" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Instant White Body Lotion (Day)</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp65.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-seller/calming-aloe-vera-gel.jpg') }}" alt="Calming Aloe Vera Gel" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Calming Aloe Vera Gel</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp45.900</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-seller/brightening-day-cream.jpg') }}" alt="Brightening Day Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Brightening Day Cream</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp49.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-seller/acne-spot-corrector.jpg') }}" alt="Acne Spot Corrector" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Acne Spot Corrector</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp39.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-seller/back-chest-acne-spray.jpg') }}" alt="Back & Chest Acne Spray" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Back & Chest Acne Spray</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp55.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-seller/daily-UV-shield-SPF50.jpg') }}" alt="Daily UV Shield SPF50" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Daily UV Shield SPF50</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp45.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-seller/underarm-fold-cream.jpg') }}" alt="Underarm Fold Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Underarm Fold Cream</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp39.500</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
+                <div class="swiper-button-next w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
+            </div>
+        </section>
     </main>
 </body>
 
