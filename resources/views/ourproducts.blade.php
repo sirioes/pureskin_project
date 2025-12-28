@@ -432,6 +432,135 @@
                 <div class="swiper-button-next w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
             </div>
         </section>
+
+        <section class="mt-12">
+            <div class="justify-items-left">
+                <h2 class="ml-1 md:ml-8 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Best Packages: "Magic in a Box"</h2>
+                <p class="ml-5 md:ml-15 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Dapatkan transformasi maksimal melalui kombinasi produk yang saling melengkapi dalam satu rangkaian paket yang lebih hemat.</p>
+            </div>
+
+            <div class="swiper mySwiper relative px-12">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-package/acne-rescue-series.jpg') }}" alt="Acne Rescue Series" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Acne Rescue Series</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp80.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-package/the-basic-glow-kit.jpg') }}" alt="The Basic Glow Kit" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">The Basic Glow Kit</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp92.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-package/the-ultimate-pureskin-experience.jpg') }}" alt="The Ultimate Pureskin Experience" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">The Ultimate Pureskin Experience</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp100.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-package/ageless-miracle-set.jpg') }}" alt="Ageless Miracle Set" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Ageless Miracle Set</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp120.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-package/intimate-care-solution.jpg') }}" alt="Intimate Care Solution" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Intimate Care Solution</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp78.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-package/mommy-pregnancy-pack.jpg') }}" alt="Mommy Pregnancy Pack" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Mommy Pregnancy Pack</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp127.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-package/body-brightening-trio.jpg') }}" alt="Body Brightening Trio" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Body Brightening Trio</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp85.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/best-package/glass-skin-specialist.jpg') }}" alt="The Glass Skin Specialist" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">The Glass Skin Specialist</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp145.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
+                <div class="swiper-button-next w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
+            </div>
+        </section>
     </main>
 </body>
 
