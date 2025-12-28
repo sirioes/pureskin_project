@@ -91,5 +91,33 @@
             </div>
         </div>
     </section>
+
+    <section class="bg-[#FFDCDC] px-6 py-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+
+            <div class="flex flex-col gap-6">
+                <div class="bg-pink-200 rounded overflow-hidden shadow-lg">
+                    <img src="{{ asset('images/aboutus/collagen.jpg') }}" class="w-full h-64 object-cover" alt="Collagen">
+                </div>
+                <div class="bg-white rounded overflow-hidden shadow-lg">
+                    <img src="{{ asset('images/aboutus/beauty1.jpg') }}" class="w-full h-64 object-cover" alt="Model">
+                </div>
+            </div>
+
+            <div class="text-gray-800 text-x1 md:text-base leading-loose text-justify px-4">
+                <p class="mb-5">
+                    Produk kami mencakup berbagai kategori seperti serum, moisturizer, toner, cleanser, dan treatment khusus. Setiap produk dirancang untuk memberikan hasil yang terasa dan terlihat, tanpa bahan berbahaya seperti paraben, alkohol keras, atau pewangi sintetis.
+                </p>
+                <p class="mb-5 font-medium">
+                    Kami percaya bahwa perawatan kulit harus memberikan kenyamanan, bukan iritasi itulah yang membuat formulasi kami berbeda.
+                </p>
+                <p>
+                    Brand kami lahir dengan satu tujuan sederhana: menghadirkan perawatan kulit yang aman, lembut, dan efektif untuk setiap orang. Kami percaya bahwa <span class="font-medium">kecantikan sejati dimulai dari kulit yang sehat.</span> Karena itu, setiap produk kami diformulasikan melalui proses riset yang teliti.
+                </p>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
