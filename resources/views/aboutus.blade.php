@@ -118,6 +118,34 @@
         </div>
     </section>
 
-</body>
+    <section class="py-16 bg-white relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-200">
 
+                <div class="group cursor-pointer">
+                    <h3 class="text-4xl md:text-5xl font-serif text-[#FFDECC] font-bold mb-2 group-hover:scale-110 transition-transform duration-300">5+</h3>
+                    <p class="text-gray-500 text-sm tracking-widest uppercase">Years Experience</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <h3 class="text-4xl md:text-5xl font-serif text-[#FFDECC] font-bold mb-2 group-hover:scale-110 transition-transform duration-300">10k+</h3>
+                    <p class="text-gray-500 text-sm tracking-widest uppercase">Happy Clients</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <h3 class="text-4xl md:text-5xl font-serif text-[#FFDECC] font-bold mb-2 group-hover:scale-110 transition-transform duration-300">50+</h3>
+                    <p class="text-gray-500 text-sm tracking-widest uppercase">Awards Won</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <h3 class="text-4xl md:text-5xl font-serif text-[#FFDECC] font-bold mb-2 group-hover:scale-110 transition-transform duration-300">100%</h3>
+                    <p class="text-gray-500 text-sm tracking-widest uppercase">Natural Ingredients</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br>
+
+</body>
 </html>
