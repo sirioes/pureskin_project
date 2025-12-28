@@ -47,5 +47,49 @@
             <img src="{{ asset('images/aboutus/beauty2.jpg') }}" alt="Woman Skin Care" class="w-full h-full object-cover">
         </div>
     </section>
+
+    <section class="bg-white py-12 px-6">
+
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h3 class="text-xs md:text-sm font-bold tracking-[0.2em] text-gray-500 uppercase mb-2">
+                The Pureskin Standard
+            </h3>
+            <h2 class="font-serif text-3xl md:text-4xl text-semibold text-gray-500">
+                Safe & Natural Formula
+            </h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto grid grid-cols-3 gap-4 md:gap-10 text-center">
+
+            <div class="flex flex-col items-center">
+                <div class="border-2 border-[#FFDECC] rounded-full p-4 mb-3 w-20 h-20 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-white" fill="#FFDECC" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-gray-500 uppercase mb-2 text-sm">Gut Safe</h3>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="border-2 border-[#FFDECC] rounded-full p-4 mb-3 w-20 h-20 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-white" fill="#FFDECC" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-gray-500 uppercase mb-2 text-sm">Lab Tested</h3>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="border-2 border-[#FFDECC] rounded-full p-4 mb-3 w-20 h-20 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-white" fill="#FFDECC" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-gray-500 uppercase mb-2 text-sm">Pure & Natural</h3>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
