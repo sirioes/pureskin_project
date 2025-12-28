@@ -40,11 +40,9 @@
 
     <!-- Body Treatment -->
     <section class="flex flex-col lg:flex-row gap-[30px] md:gap-[40px] px-[20px] md:px-[60px] py-[40px] md:py-[60px] items-center">
-        
         <div class="w-full lg:w-[35%]">
             <img src="/images/OurTreatment/massage.png" alt="Body Treatments" class="w-full h-[300px] md:h-[400px] rounded-[6px] object-cover shadow-sm" />
         </div>
-
         <div class="flex-1 w-full text-center lg:text-left">
             <h2 class="font-lora text-[32px] md:text-[40px] mb-4 text-black">Body Treatment</h2>
             
@@ -69,5 +67,42 @@
         </div>
     </section>
     
+    <!-- Facial Treatment -->
+    <section class="flex flex-col lg:flex-row gap-[40px] px-[20px] md:px-[100px] py-[40px] md:py-[60px] items-center lg:items-start relative">
+        
+        <div class="flex-1 w-full order-2 lg:order-1 z-10">
+            <h2 class="font-lora text-[32px] md:text-[40px] mb-4 text-black text-center lg:text-left">Facial Treatment</h2>
+            <p class="font-lora leading-[1.6] my-[10px] text-[16px] md:text-[20px] text-center lg:text-left">
+                Facial treatment adalah perawatan wajah yang fokus pada pembersihan pori, pengangkatan sel kulit mati, dan pemberian nutrisi agar kulit tetap sehat dan terawat.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[20px] my-[20px]">
+                <div class="font-lora border border-[#ccc] p-[20px] rounded-[8px] bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <strong>Membersihkan pori.</strong> Facial treatment membantu Kamu mengangkat kotoran, minyak, dan debu.
+                </div>
+                <div class="font-lora border border-[#ccc] p-[20px] rounded-[8px] bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <strong>Exfoliasi.</strong> Proses exfoliasi membuat tekstur kulit lebih halus dan lapisan kulit baru muncul.
+                </div>
+                <div class="font-lora border border-[#ccc] p-[20px] rounded-[8px] bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <strong>Anti Jerawat.</strong> Teknik ekstraksi membantu mengurangi penyumbatan pori dan komedo.
+                </div>
+                <div class="font-lora border border-[#ccc] p-[20px] rounded-[8px] bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <strong>Hidrasi.</strong> Serum dan masker membantu wajah Kamu terasa lembap lebih lama.
+                </div>
+            </div>
+
+            <button class="js-open-modal w-full md:w-auto font-lora mt-[10px] py-[12px] px-[40px] bg-[#f3b7b5] text-[16px] font-bold text-black rounded hover:bg-[#eeb0ae] transition-colors duration-300 block mx-auto lg:mx-0">
+                Book Now
+            </button>
+        </div>
+
+        <div class="w-full lg:w-[40%] order-1 lg:order-2 relative">
+            <img 
+                src="/images/OurTreatment/facial-slanted.png"
+                alt="facial treatment" 
+                class="w-full h-[300px] lg:h-[500px] object-cover" 
+            />
+        </div>
+    </section>
 </body>
 </html>
