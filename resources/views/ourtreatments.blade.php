@@ -17,10 +17,10 @@
     <!-- Navbar -->
     <nav class="w-full py-[20px] md:py-[30px] px-[20px] md:px-[60px] flex justify-center md:justify-end items-center bg-[#FFDCDC]">
         <ul class="list-none flex flex-wrap justify-center items-center gap-[15px] md:gap-[40px]">
-            <li><a href="#" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">Home</a></li>
-            <li><a href="#" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">About</a></li>
-            <li><a href="#" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">Products</a></li>
-            <li><a href="#" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">Treatments</a></li>
+            <li><a href="/" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">Home</a></li>
+            <li><a href="/aboutus" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">About</a></li>
+            <li><a href="/ourproducts" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">Products</a></li>
+            <li><a href="/ourtreatments" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">Treatments</a></li>
             <li>
                 <a href="#">
                     <img src="/images/icon/Profile.svg" alt="Profile Icon" class="w-[20px] h-[20px] md:w-[24px] md:h-[24px] cursor-pointer hover:opacity-70 transition">
@@ -164,6 +164,71 @@
             </div>
         </div>
     </footer>
+
+    <!-- Popup -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden">
+        
+        <div class="js-close-modal absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity cursor-pointer"></div>
+
+        <div class="absolute inset-0 flex justify-center items-center p-4 overflow-y-auto pointer-events-none">
+            
+            <div class="bg-[#FFE8CD] w-full max-w-[500px] max-h-[90vh] rounded-[20px] shadow-2xl relative pointer-events-auto flex flex-col overflow-hidden animate-fadeInUp">
+                
+                <button class="js-close-modal absolute top-4 right-5 text-2xl font-bold text-gray-600 hover:text-black">&times;</button>
+                
+                <div class="p-8 overflow-y-auto modal-scroll">
+                    <div class="text-center mb-6">
+                        <h2 class="font-manuale text-[28px] font-bold text-black uppercase tracking-wide">BOOK CONSULTATION</h2>
+                        <p class="text-[10px] text-gray-600 mt-2 px-4 leading-tight">
+                            "Siap untuk tampil lebih percaya diri? Jangan biarkan masalah kulit mengganggu harimu. Isi formulir di bawah ini, pilih perawatan favoritmu, dan biarkan kami membantu mengembalikan kilau alami wajahmu."
+                        </p>
+                    </div>
+
+                    <form action="#" class="flex flex-col gap-4">
+                        <div class="flex flex-col">
+                            <label class="font-manuale text-[14px] font-semibold mb-1 text-black">Your Name</label>
+                            <input type="text" class="w-full p-[12px] rounded-[8px] border-none bg-white text-sm outline-none focus:ring-2 focus:ring-[#f3b7b5]" required>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="font-manuale text-[14px] font-semibold mb-1 text-black">Nomor Hp</label>
+                            <input type="tel" class="w-full p-[12px] rounded-[8px] border-none bg-white text-sm outline-none focus:ring-2 focus:ring-[#f3b7b5]" required>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="font-manuale text-[14px] font-semibold mb-1 text-black">Gmail</label>
+                            <input type="email" class="w-full p-[12px] rounded-[8px] border-none bg-white text-sm outline-none focus:ring-2 focus:ring-[#f3b7b5]" required>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="font-manuale text-[14px] font-semibold mb-1 text-black">Date</label>
+                            <input type="date" class="w-full p-[12px] rounded-[8px] border-none bg-white text-sm outline-none text-gray-600 focus:ring-2 focus:ring-[#f3b7b5]" required>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-manuale text-[14px] font-semibold text-black">Treatments</label>
+                            <label class="flex items-center bg-white p-[10px] rounded-[8px] cursor-pointer group hover:bg-gray-50">
+                                <input type="checkbox" class="w-5 h-5 accent-[#f3b7b5] mr-3 rounded border-gray-300">
+                                <span class="text-sm font-medium text-gray-700">Body Treatments</span>
+                            </label>
+                            <label class="flex items-center bg-white p-[10px] rounded-[8px] cursor-pointer group hover:bg-gray-50">
+                                <input type="checkbox" class="w-5 h-5 accent-[#f3b7b5] mr-3 rounded border-gray-300">
+                                <span class="text-sm font-medium text-gray-700">Facial Treatments</span>
+                            </label>
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="font-manuale text-[14px] font-semibold mb-1 text-black">Dermatologis</label>
+                            <select class="w-full p-[12px] rounded-[8px] border-none bg-white text-sm outline-none text-gray-600 focus:ring-2 focus:ring-[#f3b7b5]">
+                                <option value="" disabled selected>Select Dermatologist</option>
+                                <option>Dr. Benedito</option>
+                                <option>Dr. Nidio</option>
+                                <option>Any Available</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="mt-4 w-full bg-[#fcd4d4] hover:bg-[#f3b7b5] text-black font-bold py-[12px] rounded-[8px] transition-colors shadow-sm">
+                            Confirm
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
