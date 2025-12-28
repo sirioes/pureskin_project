@@ -285,5 +285,86 @@
         </div>
 
     </section>
+
+        <br>
+
+    <section class="bg-[#FFE8CD] w-full">
+        
+        <div class="py-10 px-4 md:py-20 md:px-10 lg:px-20 max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-15">
+            
+            <div class="hidden lg:block flex-1 w-full h-full">
+                <img src="/images/homepage/Appointment.svg" alt="Spa Ambience" class="w-full h-150 object-cover rounded-[30px] shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
+            </div>
+
+            <div class="flex-1 w-full">
+                
+                <div class="text-center mb-8 md:mb-10">
+                    <h2 class="text-4xl md:text-6xl mb-4 font-normal tracking-wide font-marck text-black">
+                        Book Consultation
+                    </h2>
+                    <p class="text-sm md:text-base text-black max-w-lg mx-auto leading-relaxed">
+                        Kami siap membantu Anda mendapatkan perawatan terbaik. Silakan isi form di 
+                        bawah ini untuk menjadwalkan konsultasi dengan ahli dermatologi kami.
+                    </p>
+                </div>
+
+                <form action="#" class="w-full">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-8 md:gap-y-6">
+                        
+                        <div class="flex flex-col">
+                            <label class="font-medium text-sm md:text-base mb-2 text-black">Nama</label>
+                            <input type="text" placeholder="Your Name" class="p-4 border-none rounded-[10px] text-sm md:text-base bg-white outline-none w-full focus:ring-2 focus:ring-[#FFDCDC] transition-all">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label class="font-medium text-sm md:text-base mb-2 text-black">Treatments</label>
+                            <select class="p-4 border-none rounded-[10px] text-sm md:text-base bg-white outline-none w-full cursor-pointer focus:ring-2 focus:ring-[#FFDCDC] transition-all">
+                                <option>Facial Treatment</option>
+                                <option>Body Treatment</option>
+                                <option>Consultation</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label class="font-medium text-sm md:text-base mb-2 text-black">Nomor Hp</label>
+                            <input type="tel" placeholder="081..." class="p-4 border-none rounded-[10px] text-sm md:text-base bg-white outline-none w-full focus:ring-2 focus:ring-[#FFDCDC] transition-all">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label class="font-medium text-sm md:text-base mb-2 text-black">Date</label>
+                            <input type="date" class="p-4 border-none rounded-[10px] text-sm md:text-base bg-white outline-none w-full text-gray-600 cursor-pointer focus:ring-2 focus:ring-[#FFDCDC] transition-all">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label class="font-medium text-sm md:text-base mb-2 text-black">E-mail</label>
+                            <input type="email" placeholder="example@mail.com" class="p-4 border-none rounded-[10px] text-sm md:text-base bg-white outline-none w-full focus:ring-2 focus:ring-[#FFDCDC] transition-all">
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label class="font-medium text-sm md:text-base mb-2 text-black">Dermatologis</label>
+                            <select class="p-4 border-none rounded-[10px] text-sm md:text-base bg-white outline-none w-full cursor-pointer focus:ring-2 focus:ring-[#FFDCDC] transition-all">
+                                <option>Dr. Benedito</option>
+                                <option>Dr. Nidio</option>
+                                <option>Any Available</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
+                        <div class="flex items-start md:items-center gap-3">
+                            <input type="checkbox" id="reminder" class="w-5 h-5 mt-1 md:mt-0 accent-black cursor-pointer">
+                            <label for="reminder" class="text-sm text-black/80 cursor-pointer leading-tight">
+                                I want to receive reminder and update regarding my booking
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full md:w-auto bg-[#FFDCDC] text-black py-3 px-8 font-playfair font-bold text-base md:text-lg rounded-[10px] shadow-sm transition-transform duration-200 hover:bg-[#fab2b2] hover:scale-105 active:scale-95">
+                            Confirm
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
