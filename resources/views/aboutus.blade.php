@@ -147,5 +147,65 @@
     </section>
     <br>
 
+    <footer class="w-full md:w-full mx-auto bg-[#FFDECC] p-[60px_50px_30px] box-border text-[#1a1a1a]">
+        <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center flex-wrap mb-12.5 w-full gap-10 xl:gap-0">
+
+            <div class="footer-brand w-full xl:w-auto text-center xl:text-left">
+                <h2 class="font-playfair text-[3rem] md:text-[4rem] m-0 leading-none">PURESKIN</h2>
+            </div>
+
+            <div class="flex-1 w-full xl:max-w-175">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5 mb-10 text-center md:text-left">
+                    <div class="footer-col">
+                        <h3 class="text-[25px] mb-2.5 font-semibold">Contact Us</h3>
+                        <a href="" class="block text-[15px] text-[#808080] no-underline mb-2.5 leading-normal transition-colors duration-300 hover:text-black">
+                            <p>+62 0812345678</p>
+                        </a>
+                        <a href="" class="block text-[15px] text-[#808080] no-underline mb-2.5 leading-normal transition-colors duration-300 hover:text-black">
+                            <p>pureskin@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="text-[25px] mb-2.5 font-semibold">Help Center</h3>
+                        <a href="#" class="block text-[15px] text-[#808080] no-underline mb-2.5 leading-normal transition-colors duration-300 hover:text-black">About us</a>
+                    </div>
+                    <div class="footer-col">
+                        <h3 class="text-[25px] mb-2.5 font-semibold">Information</h3>
+                        <a href="#" class="block text-[15px] text-[#808080] no-underline mb-2.5 leading-normal transition-colors duration-300 hover:text-black">Products</a>
+                        <a href="#" class="block text-[15px] text-[#808080] no-underline mb-2.5 leading-normal transition-colors duration-300 hover:text-black">Treatments</a>
+                    </div>
+                </div>
+
+                <div class="newsletter w-full text-center md:text-left">
+                    <h3 class="text-[25px] mb-2.5">Join Our Newsletter</h3>
+                    <p class="text-[15px] text-[#808080] mb-3.75">Sign up your mail and get 10% Discount for your first treatment</p>
+                    <div class="flex gap-2.5 w-full max-w-100 mx-auto md:mx-0">
+                        <input type="email" placeholder="Your email address here...." class="flex-1 p-[15px_25px] border-none text-[15px] outline-none bg-white rounded-l-md md:rounded-none">
+                        <button type="submit" class="p-[15px_30px] bg-[#ffd2d2] border-none font-bold cursor-pointer transition duration-300 hover:bg-[#fcbccc] rounded-r-md md:rounded-none">GO!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-0 border-t border-[#1a1a1a] mb-6.25 opacity-80">
+
+        <div class="flex flex-col-reverse md:flex-row justify-between items-center text-[0.85rem] text-[#666] gap-5 md:gap-0 text-center md:text-left">
+            <p>&copy; 2025 pureskin. All Rights Reserved</p>
+
+            <div class="flex gap-5">
+                <a href="">
+                    <img src="/images/icon/Instagram.svg" alt="Instagram" class="w-6 h-6 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-120">
+                </a>
+
+                <a href="">
+                    <img src="/images/icon/Facebook.svg" alt="Facebook" class="w-6 h-6 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-120">
+                </a>
+                <a href="">
+                    <img src="/images/icon/Youtube.svg" alt="Youtube" class="w-6 h-6 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-120">
+                </a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
