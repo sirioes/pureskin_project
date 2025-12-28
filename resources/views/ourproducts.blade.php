@@ -174,6 +174,135 @@
                 <div class="swiper-button-next w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
             </div>
         </section>
+
+        <section class="mt-12">
+            <div class="justify-items-left">
+                <h2 class="ml-1 md:ml-8 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Body Care: "The Ultimate Sanctuary"</h2>
+                <p class="ml-5 md:ml-15 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Manjakan setiap inci tubuhmu dalam pelukan kelembutan yang mengubah rutinitas harian menjadi momen spa pribadi.</p>
+            </div>
+
+            <div class="swiper mySwiper relative px-12">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/body-care/crystal-white-soap-bar.jpg') }}" alt="Crystal White Soap Bar" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Crystal White Soap Bar</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp25.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/body-care/firming-body-butter.jpg') }}" alt="Firming Body Butter" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Firming Body Butter</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp79.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/body-care/neck-firming-cream.jpg') }}" alt="Neck Firming Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Neck Firming Cream</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp54.800</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/body-care/smooth-glow-body-scrub.jpg') }}" alt="Smooth Glow Body Scrub" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Smooth & Glow Body Scrub</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp78.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/body-care/body-oil.jpg') }}" alt="Pureskin Body Oil" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Pureskin Body Oil</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp83.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/body-care/foot-cream.jpg') }}" alt="Pureskin Foot Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Pureskin Foot Cream</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp45.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/body-care/intensive-repair-body-serum-night.jpg') }}" alt="Intensive Repair Body Serum Night" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Intensive Repair Body Serum (Night)</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp67.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-50 p-4">
+                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                            <div class="mb-4 flex justify-center items-center">
+                                <img src="{{ asset('images/our-products/body-care/uv-body-mist-protection.jpg') }}" alt="UV Body Mist Protection" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                            </div>
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">UV Body Mist Protection</h3>
+                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp59.000</p>
+                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
+                <div class="swiper-button-next w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
+            </div>
+        </section>
     </main>
 </body>
 
