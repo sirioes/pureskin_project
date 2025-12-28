@@ -6,6 +6,28 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Font Default Anda */
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Custom Fonts untuk PURESKIN (Sesuai kode sebelumnya) */
+    --font-manuale: 'Manuale', serif;
+    --font-quintessential: 'Quintessential', cursive;
+    --font-marck: 'Marck Script', cursive;
+    --font-playfair: 'Playfair Display', serif;
+    --font-lora: 'Lora', serif;
+
+    /* Custom Animation */
+    --animate-fadeInUp: fadeInUp 1s ease-out forwards;
+}
+
+/* Definisi Keyframes (Standard CSS) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
