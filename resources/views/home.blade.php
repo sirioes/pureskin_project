@@ -97,5 +97,47 @@
             </div>
         </div>
     </section>
+
+    <section class="py-10 px-4 md:py-20 md:px-10 lg:px-20 max-w-screen-2xl mx-auto text-center">
+        
+        <div class="relative w-full text-center mb-10 md:mb-16">
+            <h2 class="font-marck text-4xl md:text-6xl inline-block relative after:content-[''] after:block after:w-37.5 md:after:w-75 after:h-0.75 after:bg-[#FFDCDC] after:mx-auto after:mt-2 md:after:mt-4 after:rounded-xs">
+                What can we do for you
+            </h2>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8">     
+            
+            <div class="relative flex-1 w-full h-87.5 md:h-125 rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer group">
+                <a href="#" class="block w-full h-full">
+                    <img src="/images/homepage/FaceialTreatment.svg" alt="Facial Treatment" class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-6 md:p-10 bg-linear-to-t from-black/90 via-black/60 to-transparent text-white text-left">
+                        <h3 class="font-playfair text-2xl md:text-4xl mb-2 md:mb-4 font-medium">Facial Treatment</h3>
+                        
+                        <p class="font-lora text-sm md:text-base leading-relaxed text-gray-200 mb-0 opacity-90 md:opacity-100">
+                            Facial Treatment di Pureskin membantu membersihkan, menutrisi, 
+                            dan meremajakan kulit wajah agar tampak lebih segar dan bercahaya.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="relative flex-1 w-full h-87.5 md:h-125 rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer group">
+                <a href="#" class="block w-full h-full">
+                    <img src="/images/homepage/BodyTreatment.svg" alt="Body Treatment" class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">  
+                    
+                    <div class="absolute bottom-0 left-0 w-full p-6 md:p-10 bg-linear-to-t from-black/90 via-black/60 to-transparent text-white text-left">
+                        <h3 class="font-playfair text-2xl md:text-4xl mb-2 md:mb-4 font-medium">Body Treatment</h3>
+                        <p class="font-lora text-sm md:text-base leading-relaxed text-gray-200 mb-0 opacity-90 md:opacity-100">
+                            Body Treatment di Pureskin membantu merawat kulit tubuh agar lebih 
+                            halus, segar, dan memberikan efek relaksasi yang menenangkan.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>
