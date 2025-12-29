@@ -54,120 +54,22 @@
 
             <div class="swiper mySwiper relative px-12">
                 <div class="swiper-wrapper">
+                    @foreach ($faceCare as $product)
                     <div class="swiper-slide w-50 p-4">
                         <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
                             <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/face-care/ultimate-eye-cream.jpg') }}" alt="Ultimate Eye Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
                             </div>
                             <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Ultimate Eye Cream</h3>
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp45.000</p>
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/face-care/revitalizing-sleeping-mask.jpg') }}" alt="Revitalizing Sleeping Mask" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Revitalizing Sleeping Mask</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp35.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/face-care/advanced-retinol-serum.jpg') }}" alt="Advanced Retinol Serum" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Advanced Retinol Serum</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp55.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/face-care/luminous-vit-c-serum.jpg') }}" alt="Luminous Vit C Serum" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Luminous Vit C Serum</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp55.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/face-care/cleansing-oil.jpg') }}" alt="Cleansing Oil" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Cleansing Oil</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp76.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/face-care/pure-gentle-facial-wash.jpg') }}" alt="Pure Gentle Facial Wash" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Pure Gentle Facial Wash</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp38.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/face-care/exfoliating-toner.jpg') }}" alt="Exfoliating Toner" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Exfoliating Toner</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp58.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/face-care/hydra-glow-toner.jpg') }}" alt="Hydra Glow Toner" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Hydra Glow Toner</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp57.500</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
                 <div class="swiper-button-prev w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
@@ -183,120 +85,22 @@
 
             <div class="swiper mySwiper relative px-12">
                 <div class="swiper-wrapper">
+                    @foreach ($bodyCare as $product)
                     <div class="swiper-slide w-50 p-4">
                         <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
                             <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/body-care/crystal-white-soap-bar.jpg') }}" alt="Crystal White Soap Bar" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
                             </div>
                             <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Crystal White Soap Bar</h3>
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp25.000</p>
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/body-care/firming-body-butter.jpg') }}" alt="Firming Body Butter" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Firming Body Butter</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp79.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/body-care/neck-firming-cream.jpg') }}" alt="Neck Firming Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Neck Firming Cream</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp54.800</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/body-care/smooth-glow-body-scrub.jpg') }}" alt="Smooth Glow Body Scrub" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Smooth & Glow Body Scrub</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp78.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/body-care/body-oil.jpg') }}" alt="Pureskin Body Oil" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Pureskin Body Oil</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp83.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/body-care/foot-cream.jpg') }}" alt="Pureskin Foot Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Pureskin Foot Cream</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp45.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/body-care/intensive-repair-body-serum-night.jpg') }}" alt="Intensive Repair Body Serum Night" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Intensive Repair Body Serum (Night)</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp67.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/body-care/uv-body-mist-protection.jpg') }}" alt="UV Body Mist Protection" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">UV Body Mist Protection</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp59.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
                 <div class="swiper-button-prev w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
@@ -312,120 +116,22 @@
 
             <div class="swiper mySwiper relative px-12">
                 <div class="swiper-wrapper">
+                    @foreach ($bestSellers as $product)
                     <div class="swiper-slide w-50 p-4">
                         <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
                             <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-seller/brightening-body-wash.jpg') }}" alt="Brightening Body Wash" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
                             </div>
                             <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Brightening Body Wash</h3>
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp47.000</p>
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-seller/instant-white-body-lotion-day.jpg') }}" alt="Instant White Body Lotion Day" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Instant White Body Lotion (Day)</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp65.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-seller/calming-aloe-vera-gel.jpg') }}" alt="Calming Aloe Vera Gel" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Calming Aloe Vera Gel</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp45.900</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-seller/brightening-day-cream.jpg') }}" alt="Brightening Day Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Brightening Day Cream</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp49.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-seller/acne-spot-corrector.jpg') }}" alt="Acne Spot Corrector" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Acne Spot Corrector</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp39.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-seller/back-chest-acne-spray.jpg') }}" alt="Back & Chest Acne Spray" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Back & Chest Acne Spray</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp55.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-seller/daily-UV-shield-SPF50.jpg') }}" alt="Daily UV Shield SPF50" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Daily UV Shield SPF50</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp45.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-seller/underarm-fold-cream.jpg') }}" alt="Underarm Fold Cream" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Underarm Fold Cream</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp39.500</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
                 <div class="swiper-button-prev w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
@@ -441,120 +147,22 @@
 
             <div class="swiper mySwiper relative px-12">
                 <div class="swiper-wrapper">
+                    @foreach ($bestPackages as $product)
                     <div class="swiper-slide w-50 p-4">
                         <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
                             <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-package/acne-rescue-series.jpg') }}" alt="Acne Rescue Series" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
                             </div>
                             <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Acne Rescue Series</h3>
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp80.000</p>
+                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-package/the-basic-glow-kit.jpg') }}" alt="The Basic Glow Kit" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">The Basic Glow Kit</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp92.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-package/the-ultimate-pureskin-experience.jpg') }}" alt="The Ultimate Pureskin Experience" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">The Ultimate Pureskin Experience</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp100.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-package/ageless-miracle-set.jpg') }}" alt="Ageless Miracle Set" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Ageless Miracle Set</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp120.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-package/intimate-care-solution.jpg') }}" alt="Intimate Care Solution" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Intimate Care Solution</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp78.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-package/mommy-pregnancy-pack.jpg') }}" alt="Mommy Pregnancy Pack" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Mommy Pregnancy Pack</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp127.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-package/body-brightening-trio.jpg') }}" alt="Body Brightening Trio" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">Body Brightening Trio</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp85.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-50 p-4">
-                        <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
-                            <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset('images/our-products/best-package/glass-skin-specialist.jpg') }}" alt="The Glass Skin Specialist" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
-                            </div>
-                            <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">The Glass Skin Specialist</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
-                                    <p class="text-base md:text-xl font-medium md:font-semibold">Rp145.000</p>
-                                    <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
                 <div class="swiper-button-prev w-5! h-5! md:w-7! md:h-7! text-neutral-950! hover:text-neutral-900!"></div>
