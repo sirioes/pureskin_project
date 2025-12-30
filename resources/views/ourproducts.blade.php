@@ -23,8 +23,22 @@
                 <li><a href="/ourproducts" class="font-quintessential text-sm sm:text-base md:text-[20px] text-black no-underline hover:opacity-70 transition-opacity">Products</a></li>
                 <li><a href="/ourtreatments" class="font-quintessential text-sm sm:text-base md:text-[20px] text-black no-underline hover:opacity-70 transition-opacity">Treatments</a></li>
 
+                 @auth
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST" class="m-0">
+                            @csrf
+                            <button type="submit" class="font-quintessential text-sm sm:text-base md:text-[20px] text-red-500 hover:text-red-700 transition-colors">
+                                Logout
+                            </button>
+                        </form>
+                    </li>
+                    <li class="font-quintessential text-sm sm:text-base md:text-[20px] text-black">
+                        {{ Auth::user()->name }}
+                    </li>
+                @endauth
+
                 <li>
-                    <a href="#">
+                    <a href="{{ Auth::check() ? '#' : '/register' }}">
                         <img src="/images/icon/Profile.svg" alt="Profile Icon" class="w-5 h-5 md:w-6 md:h-6 ml-3 md:ml-7.5 cursor-pointer hover:scale-110 transition-transform">
                     </a>
                 </li>

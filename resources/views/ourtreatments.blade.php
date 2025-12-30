@@ -21,11 +21,25 @@
             <li><a href="/aboutus" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">About</a></li>
             <li><a href="/ourproducts" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">Products</a></li>
             <li><a href="/ourtreatments" class="font-quintessential text-[16px] md:text-[20px] text-black no-underline hover:text-gray-600 transition">Treatments</a></li>
-            <li>
-                <a href="#">
-                    <img src="/images/icon/Profile.svg" alt="Profile Icon" class="w-[20px] h-[20px] md:w-[24px] md:h-[24px] cursor-pointer hover:opacity-70 transition">
-                </a>
-            </li>
+             @auth
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST" class="m-0">
+                            @csrf
+                            <button type="submit" class="font-quintessential text-sm sm:text-base md:text-[20px] text-red-500 hover:text-red-700 transition-colors">
+                                Logout
+                            </button>
+                        </form>
+                    </li>
+                    <li class="font-quintessential text-sm sm:text-base md:text-[20px] text-black">
+                        {{ Auth::user()->name }}
+                    </li>
+                @endauth
+
+                <li>
+                    <a href="{{ Auth::check() ? '#' : '/register' }}">
+                        <img src="/images/icon/Profile.svg" alt="Profile Icon" class="w-5 h-5 md:w-6 md:h-6 ml-3 md:ml-7.5 cursor-pointer hover:scale-110 transition-transform">
+                    </a>
+                </li>
         </ul>
     </nav>
 

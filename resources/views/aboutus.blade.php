@@ -24,8 +24,22 @@
                 <li><a href="/ourproducts" class="font-quintessential text-sm sm:text-base md:text-[20px] text-black no-underline hover:opacity-70 transition-opacity">Products</a></li>
                 <li><a href="/ourtreatments" class="font-quintessential text-sm sm:text-base md:text-[20px] text-black no-underline hover:opacity-70 transition-opacity">Treatments</a></li>
 
+                 @auth
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST" class="m-0">
+                            @csrf
+                            <button type="submit" class="font-quintessential text-sm sm:text-base md:text-[20px] text-red-500 hover:text-red-700 transition-colors">
+                                Logout
+                            </button>
+                        </form>
+                    </li>
+                    <li class="font-quintessential text-sm sm:text-base md:text-[20px] text-black">
+                        {{ Auth::user()->name }}
+                    </li>
+                @endauth
+
                 <li>
-                    <a href="#">
+                    <a href="{{ Auth::check() ? '#' : '/register' }}">
                         <img src="/images/icon/Profile.svg" alt="Profile Icon" class="w-5 h-5 md:w-6 md:h-6 ml-3 md:ml-7.5 cursor-pointer hover:scale-110 transition-transform">
                     </a>
                 </li>
@@ -35,7 +49,7 @@
 
     <section class="grid grid-cols-1 md:grid-cols-2 bg-[#FFDCDC] min-h-screen">
         <div class="flex flex-col justify-center px-8 md:px-20 py-10 pb-0 md:pb-10">
-            <h1 class="font-serif text-5xl md:text-6xl text-[#eebb99] mb-6 leading-tight">
+            <h1 class="font-serif text-5xl md:text-8xl text-[#eebb99] mb-6 leading-tight">
                 Soft, Glowly <br> Skin For <br> Days!
             </h1>
             <h2 class="text-justify italic text-3xl mb-4 text-gray-800">about us</h2>
