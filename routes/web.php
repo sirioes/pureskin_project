@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
 use App\Models\Products;
+
 
 // 1. Halaman Utama
 Route::get('/', function () {
@@ -34,6 +36,20 @@ Route::get('/ourproducts', function () {
 
 Route::get('/ourtreatments', function () {
     return view('ourtreatments');
+});
+
+Route::middleware(['auth'])->group(function () {
+    // Route untuk menampilkan halaman keranjang
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    
+    // Route untuk menambah produk ke keranjang (Ini yang menyebabkan error tadi)
+    Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+    
+    // Route untuk update jumlah produk di halaman keranjang
+    Route::post('/cart/update/{id}', [CartController::class, 'update'])->name('cart.update');
+    
+    // Route untuk menghapus produk dari keranjang
+    Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
 });
 
 Route::get('/ourproducts', function () {
