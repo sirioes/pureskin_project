@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Pureskin</title>
+    <title>Login</title>
     @vite('resources/css/app.css')
 </head>
 <body class="bg-cover bg-center bg-no-repeat text-white flex items-center justify-center min-h-screen" style="background-image: url('/images/users/natural-background.jpg');">
 
-    <div class="bg-[#FFDCDC] p-8 rounded-xl w-full max-w-md border-1 border-black shadow-[3px_3px_16px_0px_rgba(0,0,0,1)]">
+    <div class="bg-[#FFDCDC] p-8 rounded-xl w-full max-w-md border border-black shadow-[3px_3px_16px_0px_rgba(0,0,0,1)]">
         <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Selamat Datang Kembali</h2>
 
         @if ($errors->any())
