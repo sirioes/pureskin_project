@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProductController;
 use App\Models\Products;
 
 
@@ -25,6 +26,8 @@ Route::get('/register', function () {
 Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/search-products', [ProductController::class, 'searchAjax'])->name('products.search.ajax');
 
 Route::get('/aboutus', function () {
     return view('aboutus');
