@@ -17,10 +17,45 @@
         <nav x-data="{ isOpen: false, profileOpen: false }" class="absolute top-0 w-full py-4 px-4 md:py-7.5 md:px-15 z-20 animate-fadeInUp bg-[#FFDCDC]">
             <div class="flex justify-end items-center">
                 
-                <div class="flex md:hidden items-center gap-4">
+                <div class="flex md:hidden items-center gap-3">
+                    <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
+                        <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+
+                        <div x-show="searchOpen" 
+                            style="display: none;"
+                            x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="opacity-0 scale-95"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            class="absolute top-10 right-[-60px] w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
+                            <input x-ref="searchInput" x-model="keyword" @input.debounce.300ms="performSearch()" type="text" placeholder="Cari produk..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-300 transition-colors text-black">
+                            
+                            <div x-show="isLoading" class="text-center py-4 text-xs text-gray-500"><span class="inline-block animate-pulse">Mencari...</span></div>
+                            
+                            <ul x-show="results.length > 0 && !isLoading" class="mt-3 max-h-64 overflow-y-auto custom-scrollbar">
+                                <template x-for="product in results" :key="product.id">
+                                    <li class="border-b border-gray-50 last:border-0">
+                                        <a href="/" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
+                                            <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                                <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
+                                            </div>
+                                            <div class="flex-1 min-w-0 text-left">
+                                                <p class="text-sm font-semibold text-gray-800 truncate group-hover:text-red-500" x-text="product.name"></p>
+                                                <p class="text-xs text-gray-500 font-manuale" x-text="formatRupiah(product.price)"></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </template>
+                            </ul>
+                            <div x-show="keyword.length >= 2 && results.length === 0 && !isLoading" class="text-center py-4 text-xs text-gray-400 font-manuale">Produk tidak ditemukan.</div>
+                        </div>
+                    </div>
                     <div class="relative">
                         <button @click="profileOpen = !profileOpen" class="focus:outline-none">
-                            <img src="/images/icon/Profile.svg" alt="Profile" class="w-6 h-6">
+                            <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2">
                         </button>
                         
                         <div x-show="profileOpen" @click.away="profileOpen = false" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl p-4 border border-gray-100 z-30 text-center">
@@ -30,7 +65,7 @@
                                 <form action="{{ route('logout') }}" method="POST" class="m-0">
                                     @csrf
                                     <button type="submit" class="font-manuale text-red-500 hover:underline">Logout</button>
-                                </form>
+                                </form>  
                             @else
                                 <a href="/login" class="font-manuale text-black hover:underline">Login</a>
                             @endauth
@@ -45,18 +80,15 @@
                                     {{ $cartCount }}
                                 </span>
                             @endif
-                        </a>
+                        </a>  
                     @endauth
 
-                    <button @click="isOpen = !isOpen" class="focus:outline-none ml-2">
+                    <button @click="isOpen = !isOpen" class="focus:outline-none">
                         <img :src="isOpen ? '/images/icon/close.svg' : '/images/icon/open.svg'" alt="toggle" class="w-8 h-8">
                     </button>
                 </div>
 
-                <ul :class="isOpen ? 'flex' : 'hidden'" 
-                    class="list-none md:flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 items-center 
-                        absolute md:relative top-full left-0 w-full md:w-auto bg-[#FFDCDC] md:bg-transparent 
-                        flex-col md:flex-row py-6 md:py-0 shadow-lg md:shadow-none">
+                <ul :class="isOpen ? 'flex' : 'hidden'" class="list-none md:flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 items-center absolute md:relative top-full left-0 w-full md:w-auto bg-[#FFDCDC] md:bg-transparent flex-col md:flex-row py-6 md:py-0 shadow-lg md:shadow-none">
                     
                     <li><a href="/" class="font-quintessential text-sm md:text-[20px] text-black no-underline hover:opacity-70">Home</a></li>
                     <li><a href="/aboutus" class="font-quintessential text-sm md:text-[20px] text-black no-underline hover:opacity-70">About</a></li>
@@ -64,6 +96,42 @@
                     <li><a href="/ourtreatments" class="font-quintessential text-sm md:text-[20px] text-black no-underline hover:opacity-70">Treatments</a></li>
 
                     <li class="hidden md:flex items-center gap-5 ml-5">
+                        <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
+                            <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1 hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                        
+                            <div x-show="searchOpen" 
+                                style="display: none;"
+                                x-transition:enter="transition ease-out duration-200"
+                                x-transition:enter-start="opacity-0 scale-95"
+                                x-transition:enter-end="opacity-100 scale-100"
+                                class="absolute right-0 top-12 w-80 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
+                                
+                                <input x-ref="searchInput" x-model="keyword" @input.debounce.300ms="performSearch()" type="text" placeholder="Cari produk..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-300 transition-colors text-black">
+                                
+                                <div x-show="isLoading" class="text-center py-4 text-xs text-gray-500"><span class="inline-block animate-pulse">Mencari...</span></div>
+                                
+                                <ul x-show="results.length > 0 && !isLoading" class="mt-3 max-h-64 overflow-y-auto custom-scrollbar">
+                                    <template x-for="product in results" :key="product.id">
+                                        <li class="border-b border-gray-50 last:border-0">
+                                            <a href="/" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
+                                                <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                                    <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
+                                                </div>
+                                                <div class="flex-1 min-w-0">
+                                                    <p class="text-sm font-semibold text-gray-800 truncate group-hover:text-red-500" x-text="product.name"></p>
+                                                    <p class="text-xs text-gray-500 font-manuale" x-text="formatRupiah(product.price)"></p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </template>
+                                </ul>
+                                <div x-show="keyword.length >= 2 && results.length === 0 && !isLoading" class="text-center py-4 text-xs text-gray-400 font-manuale">Produk tidak ditemukan.</div>
+                            </div>
+                        </div>
                         <div class="relative inline-block" x-data="{ profileOpen: false }">
                             @auth
                                 <button @click="profileOpen = !profileOpen" class="focus:outline-none flex items-center p-1">
@@ -93,7 +161,7 @@
                                 </div>
                             @else
                                 <a href="/register" class="p-1 block">
-                                    <img src="/images/icon/Profile.svg" alt="Profile" class="w-6 h-6 hover:scale-110 transition-transform">
+                                    <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2 hover:scale-110 transition-transform">
                                 </a>
                             @endauth
                         </div>
