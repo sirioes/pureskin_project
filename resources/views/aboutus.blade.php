@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="font-sans text-brand-dark antialiased">
+<body class="text-brand-dark antialiased font-manuale">
 
     <section class="relative w-full bg-cover bg-center flex flex-col justify-center items-center text-center px-5">
         <nav x-data="{ isOpen: false, profileOpen: false }" class="absolute top-0 w-full py-4 px-4 md:py-7.5 md:px-15 z-20 animate-fadeInUp bg-[#FFDCDC]">
@@ -22,9 +22,7 @@
                 <div class="flex md:hidden items-center gap-3">
                     <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                         <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
+                            <img src="/images/icon/Search.svg" alt="Search" class="w-5 h-5">
                         </button>
 
                         <div x-show="searchOpen"
@@ -32,7 +30,7 @@
                             x-transition:enter="transition ease-out duration-200"
                             x-transition:enter-start="opacity-0 scale-95"
                             x-transition:enter-end="opacity-100 scale-100"
-                            class="absolute top-10 right-[-60px] w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
+                            class="absolute top-10 -right-15 w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
                             <input x-ref="searchInput" x-model="keyword" @input.debounce.300ms="performSearch()" type="text" placeholder="Cari produk..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-300 transition-colors text-black">
 
                             <div x-show="isLoading" class="text-center py-4 text-xs text-gray-500"><span class="inline-block animate-pulse">Mencari...</span></div>
@@ -41,7 +39,7 @@
                                 <template x-for="product in results" :key="product.id">
                                     <li class="border-b border-gray-50 last:border-0">
                                         <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
-                                            <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                            <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden shrink-0 border border-gray-100">
                                                 <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                             </div>
                                             <div class="flex-1 min-w-0 text-left">
@@ -100,9 +98,7 @@
                     <li class="hidden md:flex items-center gap-5 ml-5">
                         <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                             <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1 hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
+                                <img src="/images/icon/Search.svg" alt="Search" class="w-6 h-6">
                             </button>
 
                             <div x-show="searchOpen"
@@ -120,7 +116,7 @@
                                     <template x-for="product in results" :key="product.id">
                                         <li class="border-b border-gray-50 last:border-0">
                                             <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
-                                                <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                                <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden shrink-0 border border-gray-100">
                                                     <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                                 </div>
                                                 <div class="flex-1 min-w-0">
@@ -162,8 +158,8 @@
                                 </div>
                             </div>
                             @else
-                            <a href="/register" class="p-1 block">
-                                <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2 hover:scale-110 transition-transform">
+                            <a href="/register" class="p-1 flex items-center">
+                                <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 hover:scale-110 transition-transform">
                             </a>
                             @endauth
                         </div>
@@ -183,28 +179,30 @@
         </nav>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 bg-[#FFDCDC] min-h-screen animate-fadeInUp">
-        <div class="flex flex-col justify-center px-8 md:px-20 py-10 pb-0 md:pb-10">
-            <h1 class="font-serif text-5xl md:text-8xl text-[#eebb99] mb-6 leading-tight">
-                Soft, Glowly <br> Skin For <br> Days!
+    <section id="about-us" class="grid grid-cols-1 md:grid-cols-2 bg-[#FFDCDC] min-h-screen animate-fadeInUp scroll-mt-20">
+
+        <div class="relative h-150 md:h-full overflow-hidden order-1 md:order-2 pt-20 md:pt-0">
+            <img src="{{ asset('images/aboutus/beauty2.jpg') }}" alt="Woman Skin Care" class="w-full h-full object-cover">
+        </div>
+
+        <div class="flex flex-col justify-center px-6 sm:px-12 md:px-20 py-12 md:py-20 order-2 md:order-1">
+            <h1 class="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#eebb99] mb-6 leading-[1.1]">
+                Soft, Glowy <br class="hidden sm:block"> Skin For <br class="hidden sm:block"> Days!
             </h1>
-            <h2 class="text-justify italic text-3xl mb-4 text-gray-800">about us</h2>
-            <p class="text-x1 leading-relaxed text-gray-700 text-justify">
+            <h2 class="text-2xl md:text-3xl mb-4 text-gray-800 uppercase tracking-widest font-playfair">About Us</h2>
+            <p class="text-base md:text-lg leading-relaxed text-gray-700 text-justify font-playfair">
                 Brand kami lahir dengan satu tujuan sederhana, menghadirkan perawatan kulit yang aman, lembut, dan efektif untuk setiap orang. Kami percaya bahwa kecantikan sejati dimulai dari kulit yang sehat. Karena itu, setiap produk kami diformulasikan melalui proses riset yang teliti.
             </p>
-        </div>
-        <div class="relative h-auto md:h-full overflow-hidden">
-            <img src="{{ asset('images/aboutus/beauty2.jpg') }}" alt="Woman Skin Care" class="w-full h-full object-cover">
         </div>
     </section>
 
     <section class="bg-white py-12 px-6">
 
         <div class="max-w-4xl mx-auto text-center mb-12">
-            <h3 class="text-xs md:text-sm font-bold tracking-[0.2em] text-gray-500 uppercase mb-2">
+            <h3 class="text-xs md:text-sm font-bold tracking-[0.2em] text-gray-500 uppercase mb-2 font-playfair">
                 The Pureskin Standard
             </h3>
-            <h2 class="font-serif text-3xl md:text-4xl text-semibold text-gray-500">
+            <h2 class="text-3xl md:text-4xl text-semibold text-gray-500 font-playfair">
                 Safe & Natural Formula
             </h2>
         </div>
@@ -217,7 +215,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-gray-500 uppercase mb-2 text-sm">Gut Safe</h3>
+                <h3 class="text-gray-500 uppercase mb-2 text-sm font-playfair">Gut Safe</h3>
             </div>
 
             <div class="flex flex-col items-center">
@@ -227,7 +225,7 @@
                             d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                     </svg>
                 </div>
-                <h3 class="text-gray-500 uppercase mb-2 text-sm">Lab Tested</h3>
+                <h3 class="text-gray-500 uppercase mb-2 text-sm font-playfair">Lab Tested</h3>
             </div>
 
             <div class="flex flex-col items-center">
@@ -237,34 +235,41 @@
                             d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-gray-500 uppercase mb-2 text-sm">Pure & Natural</h3>
+                <h3 class="text-gray-500 uppercase mb-2 text-sm font-playfair">Pure & Natural</h3>
             </div>
         </div>
     </section>
 
-    <section class="bg-[#FFDCDC] px-6 py-12">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+    <section class="bg-[#FFDCDC] px-6 py-12 md:py-24">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
 
-            <div class="flex flex-col gap-6">
-                <div class="bg-pink-200 rounded overflow-hidden shadow-lg">
-                    <img src="{{ asset('images/aboutus/collagen.jpg') }}" class="w-full h-64 object-cover" alt="Collagen">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-6 order-1">
+                <div class="bg-pink-200 rounded-2xl overflow-hidden shadow-md transform hover:scale-[1.02] transition-transform duration-300">
+                    <img src="{{ asset('images/aboutus/collagen.jpg') }}" class="w-full h-56 sm:h-64 md:h-72 object-cover" alt="Collagen Product">
                 </div>
-                <div class="bg-white rounded overflow-hidden shadow-lg">
-                    <img src="{{ asset('images/aboutus/beauty1.jpg') }}" class="w-full h-64 object-cover" alt="Model">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md transform hover:scale-[1.02] transition-transform duration-300">
+                    <img src="{{ asset('images/aboutus/beauty1.jpg') }}" class="w-full h-56 sm:h-64 md:h-72 object-cover" alt="Skincare Model">
                 </div>
             </div>
 
-            <div class="text-gray-800 text-x1 md:text-base leading-loose text-justify px-4">
-                <p class="mb-5">
-                    Produk kami mencakup berbagai kategori seperti serum, moisturizer, toner, cleanser, dan treatment khusus. Setiap produk dirancang untuk memberikan hasil yang terasa dan terlihat, tanpa bahan berbahaya seperti paraben, alkohol keras, atau pewangi sintetis.
-                </p>
-                <p class="mb-5 font-medium">
-                    Kami percaya bahwa perawatan kulit harus memberikan kenyamanan, bukan iritasi itulah yang membuat formulasi kami berbeda.
-                </p>
-                <p>
-                    Brand kami lahir dengan satu tujuan sederhana: menghadirkan perawatan kulit yang aman, lembut, dan efektif untuk setiap orang. Kami percaya bahwa <span class="font-medium">kecantikan sejati dimulai dari kulit yang sehat.</span> Karena itu, setiap produk kami diformulasikan melalui proses riset yang teliti.
-                </p>
+            <div class="text-gray-800 order-2">
+                <div class="text-base font-playfair md:text-lg leading-relaxed md:leading-loose text-justify space-y-6">
+                    <p>
+                        Produk kami mencakup berbagai kategori seperti <span class="text-[#e27831] font-bold font-playfair">serum, moisturizer, toner, cleanser,</span> dan treatment khusus. Setiap produk dirancang untuk memberikan hasil yang terasa dan terlihat, tanpa bahan berbahaya seperti paraben, alkohol keras, atau pewangi sintetis.
+                    </p>
+
+                    <div class="border-l-3 border-[#e27831] pl-3 py-3 bg-white/30 rounded-r-lg">
+                        <p class="font-playfair">
+                            "Kami percaya bahwa perawatan kulit harus memberikan kenyamanan, bukan iritasi—itulah yang membuat formulasi kami berbeda."
+                        </p>
+                    </div>
+                    
+                    <p>
+                        Brand kami lahir dengan satu tujuan sederhana: menghadirkan perawatan kulit yang aman, lembut, dan efektif untuk setiap orang. Kami percaya bahwa <span class="font-bold text-[#e27831]">kecantikan sejati dimulai dari kulit yang sehat.</span> Karena itu, setiap produk kami diformulasikan melalui proses riset yang teliti.
+                    </p>
+                </div>
             </div>
+
         </div>
     </section>
 

@@ -23,9 +23,7 @@
                 <div class="flex md:hidden items-center gap-3">
                     <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                         <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
+                            <img src="/images/icon/Search.svg" alt="Search" class="w-5 h-5">
                         </button>
 
                         <div x-show="searchOpen"
@@ -33,7 +31,7 @@
                             x-transition:enter="transition ease-out duration-200"
                             x-transition:enter-start="opacity-0 scale-95"
                             x-transition:enter-end="opacity-100 scale-100"
-                            class="absolute top-10 right-[-60px] w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
+                            class="absolute top-10 -right-15 w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
                             <input x-ref="searchInput" x-model="keyword" @input.debounce.300ms="performSearch()" type="text" placeholder="Cari produk..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-300 transition-colors text-black">
 
                             <div x-show="isLoading" class="text-center py-4 text-xs text-gray-500"><span class="inline-block animate-pulse">Mencari...</span></div>
@@ -42,7 +40,7 @@
                                 <template x-for="product in results" :key="product.id">
                                     <li class="border-b border-gray-50 last:border-0">
                                         <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
-                                            <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                            <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden shrink-0 border border-gray-100">
                                                 <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                             </div>
                                             <div class="flex-1 min-w-0 text-left">
@@ -101,9 +99,7 @@
                     <li class="hidden md:flex items-center gap-5 ml-5">
                         <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                             <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1 hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
+                                <img src="/images/icon/Search.svg" alt="Search" class="w-6 h-6">
                             </button>
 
                             <div x-show="searchOpen"
@@ -121,7 +117,7 @@
                                     <template x-for="product in results" :key="product.id">
                                         <li class="border-b border-gray-50 last:border-0">
                                             <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
-                                                <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                                <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden shrink-0 border border-gray-100">
                                                     <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                                 </div>
                                                 <div class="flex-1 min-w-0">
@@ -163,8 +159,8 @@
                                 </div>
                             </div>
                             @else
-                            <a href="/register" class="p-1 block">
-                                <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2 hover:scale-110 transition-transform">
+                            <a href="/register" class="p-1 flex items-center">
+                                <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 hover:scale-110 transition-transform">
                             </a>
                             @endauth
                         </div>
@@ -190,7 +186,7 @@
                 menyediakan rangkaian produk kecantikan berkualitas. Kami berkomitmen membantu Anda
                 merawat kulit agar tetap sehat, cerah, dan percaya diri.
             </p>
-            <a href="/ourtreatments" class="inline-block bg-[#FFE8CD] text-black py-3.75 px-10 font-playfair font-bold text-[1.2rem] no-underline rounded-[50px] shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105 hover:bg-[#fcdab3]">
+            <a href="#appointment" class="inline-block bg-[#FFE8CD] text-black py-3.75 px-10 font-playfair font-bold text-[1.2rem] no-underline rounded-[50px] shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105 hover:bg-[#fcdab3]">
                 Book Appointment
             </a>
         </div>
@@ -262,7 +258,7 @@
         <div class="flex flex-col md:flex-row gap-6 md:gap-8">
 
             <div class="relative flex-1 w-full h-87.5 md:h-125 rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer group">
-                <a href="#" class="block w-full h-full">
+                <a href="/ourtreatments" class="block w-full h-full">
                     <img src="/images/homepage/FaceialTreatment.svg" alt="Facial Treatment" class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
 
                     <div class="absolute bottom-0 left-0 w-full p-6 md:p-10 bg-linear-to-t from-black/90 via-black/60 to-transparent text-white text-left">
@@ -277,7 +273,7 @@
             </div>
 
             <div class="relative flex-1 w-full h-87.5 md:h-125 rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer group">
-                <a href="#" class="block w-full h-full">
+                <a href="/ourtreatments" class="block w-full h-full">
                     <img src="/images/homepage/BodyTreatment.svg" alt="Body Treatment" class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110">
 
                     <div class="absolute bottom-0 left-0 w-full p-6 md:p-10 bg-linear-to-t from-black/90 via-black/60 to-transparent text-white text-left">
@@ -306,7 +302,7 @@
 
             <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
                 <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/TheGlassSkinKit.svg" alt="The Glass Skin Kit" class="w-full h-62.5 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+                    <img src="/images/homepage/TheGlassSkinKit.svg" alt="The Glass Skin Kit" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
                 </div>
                 <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">The Glass Skin Kit</h3>
                 <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
@@ -321,7 +317,7 @@
 
             <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
                 <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/AcneFighterSeries.svg" alt="Acne Fighter Series" class="w-full h-62.5 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+                    <img src="/images/homepage/AcneFighterSeries.svg" alt="Acne Fighter Series" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
                 </div>
                 <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Acne Fighter Series</h3>
                 <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
@@ -336,7 +332,7 @@
 
             <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
                 <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/AgelessMiracleSet.svg" alt="Ageless Miracle Set" class="w-full h-62.5 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+                    <img src="/images/homepage/AgelessMiracleSet.svg" alt="Ageless Miracle Set" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
                 </div>
                 <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Ageless Miracle Set</h3>
                 <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
@@ -351,7 +347,7 @@
 
             <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
                 <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/FullBodyGlow.svg" alt="Full Body Glow" class="w-full h-62.5 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+                    <img src="/images/homepage/FullBodyGlow.svg" alt="Full Body Glow" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
                 </div>
                 <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Full Body Glow</h3>
                 <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
@@ -378,7 +374,7 @@
 
             <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
                 <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/DailyUVShieldSPF50.svg" alt="Daily UV Shield" class="w-full h-62.5 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+                    <img src="/images/homepage/DailyUVShieldSPF50.svg" alt="Daily UV Shield" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
                 </div>
                 <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Daily UV Shield</h3>
                 <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
@@ -393,7 +389,7 @@
 
             <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
                 <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/AcneSpotCorrector.svg" alt="Acne Spot Corrector" class="w-full h-62.5 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+                    <img src="/images/homepage/AcneSpotCorrector.svg" alt="Acne Spot Corrector" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
                 </div>
                 <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Acne Spot Corrector</h3>
                 <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
@@ -408,7 +404,7 @@
 
             <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
                 <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/InstantWhiteBodyLotion.svg" alt="Instant White Body Lotion" class="w-full h-62.5 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+                    <img src="/images/homepage/InstantWhiteBodyLotion.svg" alt="Instant White Body Lotion" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
                 </div>
                 <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Instant White Lotion</h3>
                 <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
@@ -423,7 +419,7 @@
 
             <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
                 <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/Underarm&FoldCream.svg" alt="Underarm Cream" class="w-full h-62.5 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+                    <img src="/images/homepage/Underarm&FoldCream.svg" alt="Underarm Cream" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
                 </div>
                 <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Underarm Cream</h3>
                 <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
@@ -441,7 +437,7 @@
 
     <br>
 
-    <section class="bg-[#FFE8CD] w-full">
+    <section id="appointment" class="bg-[#FFE8CD] w-full">
 
         <div class="py-10 px-4 md:py-20 md:px-10 lg:px-20 max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-15">
 

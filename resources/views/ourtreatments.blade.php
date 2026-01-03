@@ -25,9 +25,7 @@
             <div class="flex md:hidden items-center gap-3">
                 <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                     <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+                        <img src="/images/icon/Search.svg" alt="Search" class="w-5 h-5">
                     </button>
 
                     <div x-show="searchOpen"
@@ -35,7 +33,7 @@
                         x-transition:enter="transition ease-out duration-200"
                         x-transition:enter-start="opacity-0 scale-95"
                         x-transition:enter-end="opacity-100 scale-100"
-                        class="absolute top-10 right-[-60px] w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
+                        class="absolute top-10 -right-15 w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
                         <input x-ref="searchInput" x-model="keyword" @input.debounce.300ms="performSearch()" type="text" placeholder="Cari produk..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-300 transition-colors text-black">
 
                         <div x-show="isLoading" class="text-center py-4 text-xs text-gray-500"><span class="inline-block animate-pulse">Mencari...</span></div>
@@ -44,7 +42,7 @@
                             <template x-for="product in results" :key="product.id">
                                 <li class="border-b border-gray-50 last:border-0">
                                     <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
-                                        <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                        <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden shrink-0 border border-gray-100">
                                             <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex-1 min-w-0 text-left">
@@ -66,7 +64,9 @@
                     <div x-show="profileOpen" @click.away="profileOpen = false" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl p-4 border border-gray-100 z-30 text-center">
                         <div class="absolute -top-2 right-4 w-4 h-4 bg-white rotate-45 border-t border-l border-gray-100"></div>
                         @auth
-                        <p class="font-manuale text-black mb-2 pb-2 border-b border-gray-200">{{ Auth::user()->name }}</p>
+                        <p class="font-manuale text-black mb-2 pb-2 border-b border-gray-200 flex justify-center items-center w-full">
+                            {{ Auth::user()->name }}
+                        </p>
                         <form action="{{ route('logout') }}" method="POST" class="m-0">
                             @csrf
                             <button type="submit" class="font-manuale text-red-500 hover:underline">Logout</button>
@@ -103,9 +103,7 @@
                 <li class="hidden md:flex items-center gap-5 ml-5">
                     <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                         <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1 hover:scale-110 transition-transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
+                            <img src="/images/icon/Search.svg" alt="Search" class="w-6 h-6">
                         </button>
 
                         <div x-show="searchOpen"
@@ -123,7 +121,7 @@
                                 <template x-for="product in results" :key="product.id">
                                     <li class="border-b border-gray-50 last:border-0">
                                         <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
-                                            <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                            <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden shrink-0 border border-gray-100">
                                                 <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                             </div>
                                             <div class="flex-1 min-w-0">
@@ -165,8 +163,8 @@
                             </div>
                         </div>
                         @else
-                        <a href="/register" class="p-1 block">
-                            <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2 hover:scale-110 transition-transform">
+                        <a href="/register" class="p-1 flex items-center">
+                            <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 hover:scale-110 transition-transform">
                         </a>
                         @endauth
                     </div>
@@ -184,21 +182,29 @@
             </ul>
         </div>
     </nav>
-    <section class="relative w-full min-h-75 md:min-h-100 bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center px-4" style="background-image: url('/images/ourtreatment/body1.png');">
-        <div class="absolute inset-0 bg-black/30"></div>
 
-        <div class="z-10 text-white animate-fadeInUp">
-            <h1 class="font-lora text-[36px] md:text-[64px] mb-2 drop-shadow-lg leading-tight">Our Treatment</h1>
-            <p class="font-lora text-[16px] md:text-[20px] font-light drop-shadow-md">Body & Facial</p>
+    <section class="relative w-full min-h-87.5 sm:min-h-112.5 md:min-h-137.5 bg-cover bg-center bg-no-repeat flex items-center justify-center text-center px-6 animate-fadeInUp" 
+            style="background-image: url('/images/ourtreatment/body1.png');">
+        
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <div class="relative z-10 text-white animate-fadeInUp max-w-4xl">
+            <h1 class="font-lora text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 drop-shadow-xl leading-tight font-bold">
+                Our Treatment
+            </h1>
+            
+            <p class="font-lora text-lg sm:text-xl md:text-2xl font-light drop-shadow-lg tracking-widest uppercase">
+                Body & Facial
+            </p>
         </div>
     </section>
 
     <!-- Body Treatment -->
-    <section class="flex flex-col lg:flex-row gap-7.5 md:gap-10 px-5 md:px-15 py-10 md:py-15 items-center animate-fadeInUpx">
+    <section class="flex flex-col lg:flex-row gap-7.5 md:gap-10 px-5 md:px-15 py-10 md:py-15 items-center animate-fadeInUp">
         <div class="w-full lg:w-[35%]">
             <img src="/images/OurTreatment/massage.png" alt="Body Treatments" class="w-full h-75 md:h-100 rounded-md object-cover shadow-sm" />
         </div>
-        <div class="flex-1 w-full text-center lg:text-left">
+        <div class="flex-1 w-full text-center lg:text-left ">
             <h2 class="font-lora text-[32px] md:text-[40px] mb-4 text-black">Body Treatment</h2>
 
             <p class="leading-[1.6] my-2.5 text-center md:text-left text-[15px] md:text-[16px]">
@@ -211,7 +217,7 @@
                 Book Now
             </button>
 
-            <div class="flex gap-5 mt-7.5 justify-center lg:justify-start">
+            <div class="gap-5 mt-7.5 justify-center lg:justify-start hidden md:flex">
                 <div class="w-15 md:w-20">
                     <img src="/images/OurTreatment/serum.png" alt="Serum" class="w-full h-auto" />
                 </div>

@@ -21,9 +21,7 @@
                 <div class="flex md:hidden items-center gap-3">
                     <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                         <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
+                            <img src="/images/icon/Search.svg" alt="Search" class="w-5 h-5">
                         </button>
 
                         <div x-show="searchOpen"
@@ -31,7 +29,7 @@
                             x-transition:enter="transition ease-out duration-200"
                             x-transition:enter-start="opacity-0 scale-95"
                             x-transition:enter-end="opacity-100 scale-100"
-                            class="absolute top-10 right-[-60px] w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
+                            class="absolute top-10 -right-15 w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
                             <input x-ref="searchInput" x-model="keyword" @input.debounce.300ms="performSearch()" type="text" placeholder="Cari produk..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-300 transition-colors text-black">
 
                             <div x-show="isLoading" class="text-center py-4 text-xs text-gray-500"><span class="inline-block animate-pulse">Mencari...</span></div>
@@ -40,7 +38,7 @@
                                 <template x-for="product in results" :key="product.id">
                                     <li class="border-b border-gray-50 last:border-0">
                                         <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
-                                            <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                            <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden shrink-0 border border-gray-100">
                                                 <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                             </div>
                                             <div class="flex-1 min-w-0 text-left">
@@ -99,9 +97,7 @@
                     <li class="hidden md:flex items-center gap-5 ml-5">
                         <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                             <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1 hover:scale-110 transition-transform">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
+                                <img src="/images/icon/Search.svg" alt="Search" class="w-6 h-6">
                             </button>
 
                             <div x-show="searchOpen"
@@ -119,7 +115,7 @@
                                     <template x-for="product in results" :key="product.id">
                                         <li class="border-b border-gray-50 last:border-0">
                                             <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
-                                                <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
+                                                <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden shrink-0 border border-gray-100">
                                                     <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                                 </div>
                                                 <div class="flex-1 min-w-0">
@@ -161,8 +157,8 @@
                                 </div>
                             </div>
                             @else
-                            <a href="/register" class="p-1 block">
-                                <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2 hover:scale-110 transition-transform">
+                            <a href="/register" class="p-1 flex items-center">
+                                <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 hover:scale-110 transition-transform">
                             </a>
                             @endauth
                         </div>
@@ -193,13 +189,13 @@
     </section>
 
     <main class="max-w-366 mx-auto px-4 py-4 ">
-        <h1 class="text-center font-marck text-4xl md:text-7xl font-bold text-slate-950 mb-3 mt-6 animate-fadeInUp">Our Products</h1>
+        <h1 class="text-center font-marck text-4xl md:text-7xl font-semibold text-slate-950 mb-3 mt-6 animate-fadeInUp">Our Products</h1>
 
         <section class="mt-12 animate-fadeInUp">
 
             <div class="justify-items-left">
-                <h2 class="ml-1 md:ml-8 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Face Care: "Your Skin's Daily Love Letter"</h2>
-                <p class="ml-5 md:ml-15 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Rayakan kilau sejati wajahmu dengan nutrisi mendalam yang mengubah setiap pantulan cermin menjadi cerita cinta.</p>
+                <h2 class="ml-5 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Face Care: "Your Skin's Daily Love Letter"</h2>
+                <p class="ml-5 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Rayakan kilau sejati wajahmu dengan nutrisi mendalam yang mengubah setiap pantulan cermin menjadi cerita cinta.</p>
             </div>
 
             <div class="swiper mySwiper relative px-12">
@@ -212,7 +208,7 @@
                                     <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-105 block">
                                 </button>
                             </div>
-                            <div class="grow">
+                            <div class="flex flex-col h-full">
                                 <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
@@ -245,8 +241,8 @@
 
         <section class="mt-12">
             <div class="justify-items-left">
-                <h2 class="ml-1 md:ml-8 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Body Care: "The Ultimate Sanctuary"</h2>
-                <p class="ml-5 md:ml-15 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Manjakan setiap inci tubuhmu dalam pelukan kelembutan yang mengubah rutinitas harian menjadi momen spa pribadi.</p>
+                <h2 class="ml-5 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Body Care: "The Ultimate Sanctuary"</h2>
+                <p class="ml-5 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Manjakan setiap inci tubuhmu dalam pelukan kelembutan yang mengubah rutinitas harian menjadi momen spa pribadi.</p>
             </div>
 
             <div class="swiper mySwiper relative px-12">
@@ -291,8 +287,8 @@
 
         <section class="mt-12">
             <div class="justify-items-left">
-                <h2 class="ml-1 md:ml-8 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Best Sellers: "The Hall of Fame"</h2>
-                <p class="ml-5 md:ml-15 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Temukan kurasi produk favorit sejuta umat yang telah teruji secara nyata menjadi rahasia kulit impian banyak orang.</p>
+                <h2 class="ml-5 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Best Sellers: "The Hall of Fame"</h2>
+                <p class="ml-5 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Temukan kurasi produk favorit sejuta umat yang telah teruji secara nyata menjadi rahasia kulit impian banyak orang.</p>
             </div>
 
             <div class="swiper mySwiper relative px-12">
@@ -337,8 +333,8 @@
 
         <section class="mt-12">
             <div class="justify-items-left">
-                <h2 class="ml-1 md:ml-8 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Best Packages: "Magic in a Box"</h2>
-                <p class="ml-5 md:ml-15 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Dapatkan transformasi maksimal melalui kombinasi produk yang saling melengkapi dalam satu rangkaian paket yang lebih hemat.</p>
+                <h2 class="ml-5 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Best Packages: "Magic in a Box"</h2>
+                <p class="ml-5 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Dapatkan transformasi maksimal melalui kombinasi produk yang saling melengkapi dalam satu rangkaian paket yang lebih hemat.</p>
             </div>
 
             <div class="swiper mySwiper relative px-12">

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keranjang Belanja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Marck+Script&family=Manuale:wght@300..800&family=Playfair+Display:wght@400;700&family=Lora&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-[#FFDCDC] min-h-screen font-sans">
+<body class="bg-[#FFDCDC] min-h-screen font-manuale">
 
         <section class="relative w-full bg-cover bg-center flex flex-col justify-center items-center text-center px-5">
         <nav x-data="{ isOpen: false, profileOpen: false }" class="absolute top-0 w-full py-4 px-4 md:py-7.5 md:px-15 z-20 animate-fadeInUp bg-[#FFDCDC]">
@@ -16,7 +18,7 @@
                 <div class="flex md:hidden items-center gap-4">
                     <div class="relative">
                         <button @click="profileOpen = !profileOpen" class="focus:outline-none">
-                            <img src="/images/icon/Profile.svg" alt="Profile" class="w-6 h-6">
+                            <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 mt-1.5 md:w-6 md:h-6">
                         </button>
                         
                         <div x-show="profileOpen" @click.away="profileOpen = false" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl p-4 border border-gray-100 z-30 text-center">
@@ -88,12 +90,12 @@
                                     </div>
                                 </div>
                             @else
-                                <a href="/register" class="p-1 block">
+                                <a href="/register" class="p-1 flex items-center">
                                     <img src="/images/icon/Profile.svg" alt="Profile" class="w-6 h-6 hover:scale-110 transition-transform">
                                 </a>
                             @endauth
                         </div>
-                    @auth
+                        @auth
                             <a href="/cart" class="relative group hover:scale-110 transition-transform">
                                 <img src="/images/icon/Cart.svg" alt="Cart" class="w-6 h-6">
                                 @if(isset($cartCount) && $cartCount > 0)

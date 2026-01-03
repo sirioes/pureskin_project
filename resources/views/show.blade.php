@@ -8,11 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Marck+Script&family=Manuale:wght@300..800&family=Playfair+Display:wght@400;700&family=Lora&display=swap" rel="stylesheet">
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-white text-gray-900 font-sans antialiased">
+<body class="bg-white text-gray-900 font-manuale antialiased">
 
     <nav x-data="{ isOpen: false, profileOpen: false }" class="absolute top-0 w-full py-4 px-4 md:py-7.5 md:px-15 z-20 animate-fadeInUp bg-[#FFDCDC]">
         <div class="flex justify-end items-center">
@@ -176,7 +175,7 @@
                         </button>
                     </div>
 
-                    <div class="prose prose-sm text-gray-600 leading-relaxed min-h-[120px]">
+                    <div class="prose prose-sm text-gray-600 leading-relaxed min-h-30">
                         <div x-show="activeTab === 'description'"
                             x-transition:enter="transition ease-out duration-300"
                             x-transition:enter-start="opacity-0 translate-y-2"
