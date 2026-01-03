@@ -17,7 +17,7 @@
     <section class="relative w-full bg-cover bg-center flex flex-col justify-center items-center text-center px-5">
         <nav x-data="{ isOpen: false, profileOpen: false }" class="absolute top-0 w-full py-4 px-4 md:py-7.5 md:px-15 z-20 animate-fadeInUp bg-[#FFDCDC]">
             <div class="flex justify-end items-center">
-                
+
                 <div class="flex md:hidden items-center gap-3">
                     <div x-data="navbarSearch()" class="relative" @click.away="searchOpen = false; keyword = ''">
                         <button @click="triggerFocus()" class="focus:outline-none flex items-center p-1">
@@ -26,20 +26,20 @@
                             </svg>
                         </button>
 
-                        <div x-show="searchOpen" 
+                        <div x-show="searchOpen"
                             style="display: none;"
                             x-transition:enter="transition ease-out duration-200"
                             x-transition:enter-start="opacity-0 scale-95"
                             x-transition:enter-end="opacity-100 scale-100"
                             class="absolute top-10 right-[-60px] w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
                             <input x-ref="searchInput" x-model="keyword" @input.debounce.300ms="performSearch()" type="text" placeholder="Cari produk..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-300 transition-colors text-black">
-                            
+
                             <div x-show="isLoading" class="text-center py-4 text-xs text-gray-500"><span class="inline-block animate-pulse">Mencari...</span></div>
-                            
+
                             <ul x-show="results.length > 0 && !isLoading" class="mt-3 max-h-64 overflow-y-auto custom-scrollbar">
                                 <template x-for="product in results" :key="product.id">
                                     <li class="border-b border-gray-50 last:border-0">
-                                        <a href="/" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
+                                        <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
                                             <div class="w-10 h-10 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
                                                 <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                             </div>
@@ -58,30 +58,30 @@
                         <button @click="profileOpen = !profileOpen" class="focus:outline-none">
                             <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2">
                         </button>
-                        
+
                         <div x-show="profileOpen" @click.away="profileOpen = false" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl p-4 border border-gray-100 z-30 text-center">
                             <div class="absolute -top-2 right-4 w-4 h-4 bg-white rotate-45 border-t border-l border-gray-100"></div>
                             @auth
-                                <p class="font-manuale text-black mb-2 pb-2 border-b border-gray-200">{{ Auth::user()->name }}</p>
-                                <form action="{{ route('logout') }}" method="POST" class="m-0">
-                                    @csrf
-                                    <button type="submit" class="font-manuale text-red-500 hover:underline">Logout</button>
-                                </form>  
+                            <p class="font-manuale text-black mb-2 pb-2 border-b border-gray-200">{{ Auth::user()->name }}</p>
+                            <form action="{{ route('logout') }}" method="POST" class="m-0">
+                                @csrf
+                                <button type="submit" class="font-manuale text-red-500 hover:underline">Logout</button>
+                            </form>
                             @else
-                                <a href="/login" class="font-manuale text-black hover:underline">Login</a>
+                            <a href="/login" class="font-manuale text-black hover:underline">Login</a>
                             @endauth
                         </div>
                     </div>
 
                     @auth
-                        <a href="/cart" class="relative group">
-                            <img src="/images/icon/Cart.svg" alt="Cart Icon" class="w-5 h-5 md:w-6 md:h-6 cursor-pointer hover:scale-110 transition-transform">
-                            @if(isset($cartCount) && $cartCount > 0)
-                                <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full px-1.5 py-0.5 border-2 border-[#FFDCDC]">
-                                    {{ $cartCount }}
-                                </span>
-                            @endif
-                        </a>  
+                    <a href="/cart" class="relative group">
+                        <img src="/images/icon/Cart.svg" alt="Cart Icon" class="w-5 h-5 md:w-6 md:h-6 cursor-pointer hover:scale-110 transition-transform">
+                        @if(isset($cartCount) && $cartCount > 0)
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full px-1.5 py-0.5 border-2 border-[#FFDCDC]">
+                            {{ $cartCount }}
+                        </span>
+                        @endif
+                    </a>
                     @endauth
 
                     <button @click="isOpen = !isOpen" class="focus:outline-none">
@@ -90,7 +90,7 @@
                 </div>
 
                 <ul :class="isOpen ? 'flex' : 'hidden'" class="list-none md:flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 items-center absolute md:relative top-full left-0 w-full md:w-auto bg-[#FFDCDC] md:bg-transparent flex-col md:flex-row py-6 md:py-0 shadow-lg md:shadow-none">
-                    
+
                     <li><a href="/" class="font-quintessential text-sm md:text-[20px] text-black no-underline hover:opacity-70">Home</a></li>
                     <li><a href="/aboutus" class="font-quintessential text-sm md:text-[20px] text-black no-underline hover:opacity-70">About</a></li>
                     <li><a href="/ourproducts" class="font-quintessential text-sm md:text-[20px] text-black no-underline hover:opacity-70">Products</a></li>
@@ -103,22 +103,22 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                             </button>
-                        
-                            <div x-show="searchOpen" 
+
+                            <div x-show="searchOpen"
                                 style="display: none;"
                                 x-transition:enter="transition ease-out duration-200"
                                 x-transition:enter-start="opacity-0 scale-95"
                                 x-transition:enter-end="opacity-100 scale-100"
                                 class="absolute right-0 top-12 w-80 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
-                                
+
                                 <input x-ref="searchInput" x-model="keyword" @input.debounce.300ms="performSearch()" type="text" placeholder="Cari produk..." class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-300 transition-colors text-black">
-                                
+
                                 <div x-show="isLoading" class="text-center py-4 text-xs text-gray-500"><span class="inline-block animate-pulse">Mencari...</span></div>
-                                
+
                                 <ul x-show="results.length > 0 && !isLoading" class="mt-3 max-h-64 overflow-y-auto custom-scrollbar">
                                     <template x-for="product in results" :key="product.id">
                                         <li class="border-b border-gray-50 last:border-0">
-                                            <a href="/" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
+                                            <a :href="'/products/' + product.id" class="flex items-center gap-3 p-2 hover:bg-red-50 rounded-lg transition-colors group">
                                                 <div class="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border border-gray-100">
                                                     <img :src="product.image ? '/' + product.image : '/images/placeholder.jpg'" class="w-full h-full object-cover">
                                                 </div>
@@ -135,46 +135,46 @@
                         </div>
                         <div class="relative inline-block" x-data="{ profileOpen: false }">
                             @auth
-                                <button @click="profileOpen = !profileOpen" class="focus:outline-none flex items-center p-1">
-                                    <img src="/images/icon/Profile.svg" alt="Profile" class="w-6 h-6 hover:scale-110 transition-transform">
-                                </button>
+                            <button @click="profileOpen = !profileOpen" class="focus:outline-none flex items-center p-1">
+                                <img src="/images/icon/Profile.svg" alt="Profile" class="w-6 h-6 hover:scale-110 transition-transform">
+                            </button>
 
-                                <div x-show="profileOpen" 
-                                    x-transition:enter="transition ease-out duration-200"
-                                    x-transition:enter-start="opacity-0 scale-95"
-                                    x-transition:enter-end="opacity-100 scale-100"
-                                    @click.away="profileOpen = false" 
-                                    class="absolute left-1/2 -translate-x-1/2 mt-3 w-48 bg-white rounded-2xl shadow-2xl border border-gray-50 z-50 overflow-hidden"
-                                    style="display: none;">
-                                    
-                                    <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 border-t border-l border-gray-50"></div>
-                                    
-                                    <div class="relative bg-white p-4">
-                                        <h3 class="font-manuale text-base text-black mb-2 truncate">{{ Auth::user()->name }}</h3>
-                                        <hr class="border-gray-100 mb-3">
-                                        <form action="{{ route('logout') }}" method="POST" class="m-0">
-                                            @csrf
-                                            <button type="submit" class="w-full font-manuale text-red-500 text-sm font-medium hover:bg-red-50 py-2 rounded-lg transition-colors">
-                                                Logout
-                                            </button>
-                                        </form>
-                                    </div>
+                            <div x-show="profileOpen"
+                                x-transition:enter="transition ease-out duration-200"
+                                x-transition:enter-start="opacity-0 scale-95"
+                                x-transition:enter-end="opacity-100 scale-100"
+                                @click.away="profileOpen = false"
+                                class="absolute left-1/2 -translate-x-1/2 mt-3 w-48 bg-white rounded-2xl shadow-2xl border border-gray-50 z-50 overflow-hidden"
+                                style="display: none;">
+
+                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 border-t border-l border-gray-50"></div>
+
+                                <div class="relative bg-white p-4">
+                                    <h3 class="font-manuale text-base text-black mb-2 truncate">{{ Auth::user()->name }}</h3>
+                                    <hr class="border-gray-100 mb-3">
+                                    <form action="{{ route('logout') }}" method="POST" class="m-0">
+                                        @csrf
+                                        <button type="submit" class="w-full font-manuale text-red-500 text-sm font-medium hover:bg-red-50 py-2 rounded-lg transition-colors">
+                                            Logout
+                                        </button>
+                                    </form>
                                 </div>
+                            </div>
                             @else
-                                <a href="/register" class="p-1 block">
-                                    <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2 hover:scale-110 transition-transform">
-                                </a>
+                            <a href="/register" class="p-1 block">
+                                <img src="/images/icon/Profile.svg" alt="Profile" class="w-5 h-5 md:w-6 md:h-6 mt-2 hover:scale-110 transition-transform">
+                            </a>
                             @endauth
                         </div>
-                    @auth
-                            <a href="/cart" class="relative group hover:scale-110 transition-transform">
-                                <img src="/images/icon/Cart.svg" alt="Cart" class="w-6 h-6">
-                                @if(isset($cartCount) && $cartCount > 0)
-                                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full px-1.5 py-0.5 border-2 border-[#FFDCDC]">
-                                        {{ $cartCount }}
-                                    </span>
-                                @endif
-                            </a>
+                        @auth
+                        <a href="/cart" class="relative group hover:scale-110 transition-transform">
+                            <img src="/images/icon/Cart.svg" alt="Cart" class="w-6 h-6">
+                            @if(isset($cartCount) && $cartCount > 0)
+                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full px-1.5 py-0.5 border-2 border-[#FFDCDC]">
+                                {{ $cartCount }}
+                            </span>
+                            @endif
+                        </a>
                         @endauth
                     </li>
                 </ul>
@@ -208,31 +208,33 @@
                     <div class="swiper-slide w-50 p-4">
                         <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
                             <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                                <button command="show-modal" commandfor="modal-{{ $product->id }}" class="focus:outline-none cursor-pointer">
+                                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-105 block">
+                                </button>
                             </div>
                             <div class="grow">
                                 <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
-                                
+
                                     @auth
-                                        <form action="{{ route('cart.add') }}" method="POST" class="m-0">
-                                            @csrf
-                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
-                                            <input type="hidden" name="quantity" value="1">
-                                            <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
-                                                Add to cart
-                                            </button>
-                                        </form>
+                                    <form action="{{ route('cart.add') }}" method="POST" class="m-0">
+                                        @csrf
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
+                                            Add to Cart
+                                        </button>
+                                    </form>
                                     @else
-                                        <a href="{{ route('login') }}" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0 no-underline text-center">
-                                            Add to cart
-                                        </a>
+                                    <a href="{{ route('login') }}" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0 no-underline text-center">
+                                        Add to Cart
+                                    </a>
                                     @endauth
                                 </div>
                             </div>
                         </div>
-                     </div>
+                    </div>
                     @endforeach
                 </div>
 
@@ -253,25 +255,27 @@
                     <div class="swiper-slide w-50 p-4">
                         <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
                             <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                                <button command="show-modal" commandfor="modal-{{ $product->id }}" class="focus:outline-none cursor-pointer">
+                                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-105 block">
+                                </button>
                             </div>
                             <div class="grow">
                                 <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     @auth
-                                        <form action="{{ route('cart.add') }}" method="POST" class="m-0">
-                                            @csrf
-                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
-                                            <input type="hidden" name="quantity" value="1">
-                                            <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
-                                                Add to cart
-                                            </button>
-                                        </form>
+                                    <form action="{{ route('cart.add') }}" method="POST" class="m-0">
+                                        @csrf
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
+                                            Add to Cart
+                                        </button>
+                                    </form>
                                     @else
-                                        <a href="{{ route('login') }}" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0 no-underline text-center">
-                                            Add to cart
-                                        </a>
+                                    <a href="{{ route('login') }}" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0 no-underline text-center">
+                                        Add to Cart
+                                    </a>
                                     @endauth
                                 </div>
                             </div>
@@ -297,25 +301,27 @@
                     <div class="swiper-slide w-50 p-4">
                         <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
                             <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                                <button command="show-modal" commandfor="modal-{{ $product->id }}" class="focus:outline-none cursor-pointer">
+                                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-105 block">
+                                </button>
                             </div>
                             <div class="grow">
                                 <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     @auth
-                                        <form action="{{ route('cart.add') }}" method="POST" class="m-0">
-                                            @csrf
-                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
-                                            <input type="hidden" name="quantity" value="1">
-                                            <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
-                                                Add to cart
-                                            </button>
-                                        </form>
+                                    <form action="{{ route('cart.add') }}" method="POST" class="m-0">
+                                        @csrf
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
+                                            Add to Cart
+                                        </button>
+                                    </form>
                                     @else
-                                        <a href="{{ route('login') }}" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0 no-underline text-center">
-                                            Add to cart
-                                        </a>
+                                    <a href="{{ route('login') }}" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0 no-underline text-center">
+                                        Add to Cart
+                                    </a>
                                     @endauth
                                 </div>
                             </div>
@@ -341,25 +347,27 @@
                     <div class="swiper-slide w-50 p-4">
                         <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
                             <div class="mb-4 flex justify-center items-center">
-                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-100 block">
+                                <button command="show-modal" commandfor="modal-{{ $product->id }}" class="focus:outline-none cursor-pointer">
+                                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-105 block">
+                                </button>
                             </div>
                             <div class="grow">
                                 <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
                                 <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
-                                   @auth
-                                        <form action="{{ route('cart.add') }}" method="POST" class="m-0">
-                                            @csrf
-                                            <input type="hidden" name="product_id" value="{{ $product->id }}">
-                                            <input type="hidden" name="quantity" value="1">
-                                            <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
-                                                Add to cart
-                                            </button>
-                                        </form>
+                                    @auth
+                                    <form action="{{ route('cart.add') }}" method="POST" class="m-0">
+                                        @csrf
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
+                                            Add to Cart
+                                        </button>
+                                    </form>
                                     @else
-                                        <a href="{{ route('login') }}" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0 no-underline text-center">
-                                            Add to cart
-                                        </a>
+                                    <a href="{{ route('login') }}" class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0 no-underline text-center">
+                                        Add to Cart
+                                    </a>
                                     @endauth
                                 </div>
                             </div>
@@ -376,7 +384,7 @@
 
     <footer class="w-full md:w-full mx-auto bg-[#FFDECC] p-[60px_50px_30px] box-border text-[#1a1a1a]">
         <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center flex-wrap mb-12.5 w-full gap-10 xl:gap-0">
-            
+
             <div class="footer-brand w-full xl:w-auto text-center xl:text-left">
                 <h2 class="font-playfair text-[3rem] md:text-[4rem] m-0 leading-none">PURESKIN</h2>
             </div>
@@ -434,5 +442,9 @@
         </div>
     </footer>
 </body>
+
+@foreach($semuaProdukModal as $product)
+@include('product-modal', ['product' => $product])
+@endforeach
 
 </html>
