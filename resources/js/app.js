@@ -3,6 +3,7 @@ import "./bootstrap";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import Alpine from "alpinejs";
+import "@tailwindplus/elements";
 
 // 2. INISIALISASI ALPINE & COMPONENT
 window.Alpine = Alpine;
@@ -37,7 +38,7 @@ Alpine.data("navbarSearch", () => ({
         try {
             // Pastikan Anda sudah membuat Route '/search-products' di Laravel
             const response = await fetch(
-                `/search-products?query=${this.keyword}`
+                `/search-products?query=${this.keyword}`,
             );
 
             if (!response.ok) throw new Error("Network response was not ok");
@@ -129,4 +130,50 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         });
     }
+});
+
+// 4. LOGIKA MODAL PRODUK
+document.addEventListener("DOMContentLoaded", () => {
+    // Fungsi Membuka Modal
+    const openButtons = document.querySelectorAll('[command="show-modal"]');
+
+    openButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = btn.getAttribute("commandfor");
+            const modal = document.getElementById(targetId);
+
+            if (modal) {
+                modal.classList.remove("hidden");
+                document.body.style.overflow = "hidden";
+            }
+        });
+    });
+
+    // Fungsi Menutup Modal
+    const closeButtons = document.querySelectorAll('[command="close"]');
+
+    closeButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault(); // Tambahkan ini untuk keamanan
+            const targetId = btn.getAttribute("commandfor");
+            const modal = document.getElementById(targetId);
+
+            if (modal) {
+                modal.classList.add("hidden");
+                document.body.style.overflow = "auto";
+            }
+        });
+    });
+
+    // Close dengan klik di luar area modal (Backdrop)
+    window.addEventListener("click", (e) => {
+        if (e.target.tagName === "EL-DIALOG-BACKDROP") {
+            const modal = e.target.closest("el-dialog");
+            if (modal) {
+                modal.classList.add("hidden");
+                document.body.style.overflow = "auto";
+            }
+        }
+    });
 });
