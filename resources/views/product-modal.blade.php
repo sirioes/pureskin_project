@@ -1,7 +1,7 @@
 <el-dialog id="modal-{{ $product->id }}" class="hidden fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent z-100">
     <el-dialog-backdrop class="fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity"></el-dialog-backdrop>
 
-    <div class="flex min-h-full items-center justify-center p-4 text-center">
+    <div command="close" commandfor="modal-{{ $product->id }}" class="flex min-h-full items-center justify-center p-4 text-center">
         <el-dialog-panel class="relative w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all">
 
             <div class="grid grid-cols-1 md:grid-cols-2">
@@ -11,9 +11,7 @@
 
                 <div class="p-8 md:p-12 flex flex-col justify-center relative">
                     <button command="close" commandfor="modal-{{ $product->id }}" class="absolute top-6 right-6 text-gray-400 hover:text-black transition-colors focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        <img src="/images/icon/close.svg" alt="close button" class="w-6 h-6">
                     </button>
 
                     <div class="mb-2">
