@@ -1,7 +1,7 @@
 <el-dialog id="modal-{{ $product->id }}" class="hidden fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent z-100">
-    <el-dialog-backdrop class="fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity"></el-dialog-backdrop>
+    <div class="fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity" command="close" commandfor="modal-{{ $product->id }}"></div>
 
-    <div command="close" commandfor="modal-{{ $product->id }}" class="flex min-h-full items-center justify-center p-4 text-center">
+    <div class="flex min-h-full items-center justify-center p-4 text-center">
         <el-dialog-panel class="relative w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all">
 
             <div class="grid grid-cols-1 md:grid-cols-2">

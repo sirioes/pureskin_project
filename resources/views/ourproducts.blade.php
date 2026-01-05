@@ -208,9 +208,9 @@
                                     <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-105 block">
                                 </button>
                             </div>
-                            <div class="flex flex-col h-full">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                            <div class="grow">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-18 md:h-12">{{ $product->name }}</h3>
+                                <div class="flex flex-col xl:flex-row xl:justify-between items-start xl:items-center mt-4 mb-2 gap-2 md:gap-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
 
                                     @auth
@@ -256,8 +256,8 @@
                                 </button>
                             </div>
                             <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-18 md:h-12">{{ $product->name }}</h3>
+                                <div class="flex flex-col xl:flex-row xl:justify-between items-start xl:items-center mt-4 mb-2 gap-2 md:gap-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     @auth
                                     <form action="{{ route('cart.add') }}" method="POST" class="m-0">
@@ -302,8 +302,8 @@
                                 </button>
                             </div>
                             <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-18 md:h-12">{{ $product->name }}</h3>
+                                <div class="flex flex-col xl:flex-row xl:justify-between items-start xl:items-center mt-4 mb-2 gap-2 md:gap-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     @auth
                                     <form action="{{ route('cart.add') }}" method="POST" class="m-0">
@@ -348,8 +348,8 @@
                                 </button>
                             </div>
                             <div class="grow">
-                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-12">{{ $product->name }}</h3>
-                                <div class="flex justify-between items-center mt-4 mb-2 space-x-3 md:space-x-4">
+                                <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-18 md:h-12">{{ $product->name }}</h3>
+                                <div class="flex flex-col xl:flex-row xl:justify-between items-start xl:items-center mt-4 mb-2 gap-2 md:gap-4">
                                     <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                                     @auth
                                     <form action="{{ route('cart.add') }}" method="POST" class="m-0">

@@ -289,150 +289,72 @@
         </div>
     </section>
 
-    <section class="py-10 px-4 md:py-16 md:px-10 lg:px-12 xl:px-20 bg-white max-w-screen-2xl mx-auto">
-
-        <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-8 md:mb-12 mt-4 text-center md:text-left gap-4">
-            <h2 class="font-marck text-4xl md:text-5xl lg:text-[3rem] m-0 leading-tight">Bundling Package</h2>
-            <a href="/ourproducts" class="no-underline text-[#1a1a1a] text-sm md:text-base border-b border-transparent transition-all duration-300 hover:border-[#1a1a1a] hover:opacity-70">
-                View more products &rarr;
-            </a>
+    <section class="mt-12 max-w-7xl items-center mx-auto">
+        <div class="justify-items-left">
+            <h2 class="ml-5 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Best Sellers: "The Hall of Fame"</h2>
+            <p class="ml-5 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Temukan kurasi produk favorit sejuta umat yang telah teruji secara nyata menjadi rahasia kulit impian banyak orang.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 lg:gap-5 xl:gap-8">
-
-            <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
-                <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/TheGlassSkinKit.svg" alt="The Glass Skin Kit" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+        <div class="swiper mySwiper relative px-12">
+            <div class="swiper-wrapper">
+                @foreach ($bestPackages as $product)
+                <div class="swiper-slide w-50 p-4">
+                    <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                        <div class="mb-4 flex justify-center items-center">
+                            <button command="show-modal" commandfor="modal-{{ $product->id }}" class="focus:outline-none cursor-pointer">
+                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-105 block">
+                            </button>
+                        </div>
+                        <div class="grow">
+                            <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-18 md:h-12">{{ $product->name }}</h3>
+                            <div class="flex flex-col xl:flex-row xl:justify-between items-start xl:items-center mt-4 mb-2 gap-2 md:gap-4">
+                                <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
+                                <a href="/ourproducts">
+                                    <button class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
+                                        View Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">The Glass Skin Kit</h3>
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
-                    <span class="font-lora text-lg md:text-xl lg:text-base xl:text-xl font-bold text-black">Rp120.000</span>
-                    <a href="/ourproducts" class="w-full xl:w-auto">
-                        <button class="w-full xl:w-auto bg-[#FFE8CD] border-none py-2 px-4 lg:px-2 xl:px-4 text-sm md:text-base lg:text-sm xl:text-base cursor-pointer rounded-[50px] font-playfair transition duration-200 hover:bg-[#ffdcb0] hover:scale-105 whitespace-nowrap">
-                            View Details
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
-                <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/AcneFighterSeries.svg" alt="Acne Fighter Series" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
-                </div>
-                <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Acne Fighter Series</h3>
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
-                    <span class="font-lora text-lg md:text-xl lg:text-base xl:text-xl font-bold text-black">Rp120.000</span>
-                    <a href="/ourproducts" class="w-full xl:w-auto">
-                        <button class="w-full xl:w-auto bg-[#FFE8CD] border-none py-2 px-4 lg:px-2 xl:px-4 text-sm md:text-base lg:text-sm xl:text-base cursor-pointer rounded-[50px] font-playfair transition duration-200 hover:bg-[#ffdcb0] hover:scale-105 whitespace-nowrap">
-                            View Details
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
-                <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/AgelessMiracleSet.svg" alt="Ageless Miracle Set" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
-                </div>
-                <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Ageless Miracle Set</h3>
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
-                    <span class="font-lora text-lg md:text-xl lg:text-base xl:text-xl font-bold text-black">Rp120.000</span>
-                    <a href="/ourproducts" class="w-full xl:w-auto">
-                        <button class="w-full xl:w-auto bg-[#FFE8CD] border-none py-2 px-4 lg:px-2 xl:px-4 text-sm md:text-base lg:text-sm xl:text-base cursor-pointer rounded-[50px] font-playfair transition duration-200 hover:bg-[#ffdcb0] hover:scale-105 whitespace-nowrap">
-                            View Details
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
-                <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/FullBodyGlow.svg" alt="Full Body Glow" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
-                </div>
-                <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Full Body Glow</h3>
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
-                    <span class="font-lora text-lg md:text-xl lg:text-base xl:text-xl font-bold text-black">Rp120.000</span>
-                    <a href="/ourproducts" class="w-full xl:w-auto">
-                        <button class="w-full xl:w-auto bg-[#FFE8CD] border-none py-2 px-4 lg:px-2 xl:px-4 text-sm md:text-base lg:text-sm xl:text-base cursor-pointer rounded-[50px] font-playfair transition duration-200 hover:bg-[#ffdcb0] hover:scale-105 whitespace-nowrap">
-                            View Details
-                        </button>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
+    </section>
 
-        <div class="h-10 md:h-16 w-full"></div>
-
-        <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-8 md:mb-12 text-center md:text-left gap-4">
-            <h2 class="font-marck text-4xl md:text-5xl lg:text-[3rem] m-0 leading-tight">Best Seller</h2>
-            <a href="/ourproducts" class="no-underline text-[#1a1a1a] text-sm md:text-base border-b border-transparent transition-all duration-300 hover:border-[#1a1a1a] hover:opacity-70">
-                View more products &rarr;
-            </a>
+    <section class="mt-12 mb-20 max-w-7xl items-center mx-auto">
+        <div class="justify-items-left">
+            <h2 class="ml-5 font-marck text-xl md:text-3xl font-bold text-slate-950 mb-1">Best Packages: "Magic in a Box"</h2>
+            <p class="ml-5 max-w-2xl md:max-w-7xl font-lora text-xs md:text-lg text-slate-900 mb-4">Dapatkan transformasi maksimal melalui kombinasi produk yang saling melengkapi dalam satu rangkaian paket yang lebih hemat.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 lg:gap-5 xl:gap-8">
-
-            <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
-                <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/DailyUVShieldSPF50.svg" alt="Daily UV Shield" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
+        <div class="swiper mySwiper relative px-12">
+            <div class="swiper-wrapper">
+                @foreach ($bestSellers as $product)
+                <div class="swiper-slide w-50 p-4">
+                    <div class="bg-[#FFDCDC] p-4 rounded-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group h-full">
+                        <div class="mb-4 flex justify-center items-center">
+                            <button command="show-modal" commandfor="modal-{{ $product->id }}" class="focus:outline-none cursor-pointer">
+                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="rounded-2xl h-auto object-contain transition-transform duration-500 group-hover:scale-105 block">
+                            </button>
+                        </div>
+                        <div class="grow">
+                            <h3 class="font-manuale font-medium md:font-semibold text-lg md:text-xl text-black leading-tight h-18 md:h-12">{{ $product->name }}</h3>
+                            <div class="flex flex-col xl:flex-row xl:justify-between items-start xl:items-center mt-4 mb-2 gap-2 md:gap-4">
+                                <p class="text-base md:text-xl font-medium md:font-semibold">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
+                                <a href="/ourproducts">
+                                    <button class="bg-[#FFE8CD] text-black py-1 px-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium hover:bg-[#FFD6BA] transition duration-300 shrink-0">
+                                        View Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Daily UV Shield</h3>
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
-                    <span class="font-lora text-lg md:text-xl lg:text-base xl:text-xl font-bold text-black">Rp120.000</span>
-                    <a href="/ourproducts" class="w-full xl:w-auto">
-                        <button class="w-full xl:w-auto bg-[#FFE8CD] border-none py-2 px-4 lg:px-2 xl:px-4 text-sm md:text-base lg:text-sm xl:text-base cursor-pointer rounded-[50px] font-playfair transition duration-200 hover:bg-[#ffdcb0] hover:scale-105 whitespace-nowrap">
-                            View Details
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
-                <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/AcneSpotCorrector.svg" alt="Acne Spot Corrector" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
-                </div>
-                <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Acne Spot Corrector</h3>
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
-                    <span class="font-lora text-lg md:text-xl lg:text-base xl:text-xl font-bold text-black">Rp120.000</span>
-                    <a href="/ourproducts" class="w-full xl:w-auto">
-                        <button class="w-full xl:w-auto bg-[#FFE8CD] border-none py-2 px-4 lg:px-2 xl:px-4 text-sm md:text-base lg:text-sm xl:text-base cursor-pointer rounded-[50px] font-playfair transition duration-200 hover:bg-[#ffdcb0] hover:scale-105 whitespace-nowrap">
-                            View Details
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
-                <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/InstantWhiteBodyLotion.svg" alt="Instant White Body Lotion" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
-                </div>
-                <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Instant White Lotion</h3>
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
-                    <span class="font-lora text-lg md:text-xl lg:text-base xl:text-xl font-bold text-black">Rp120.000</span>
-                    <a href="/ourproducts" class="w-full xl:w-auto">
-                        <button class="w-full xl:w-auto bg-[#FFE8CD] border-none py-2 px-4 lg:px-2 xl:px-4 text-sm md:text-base lg:text-sm xl:text-base cursor-pointer rounded-[50px] font-playfair transition duration-200 hover:bg-[#ffdcb0] hover:scale-105 whitespace-nowrap">
-                            View Details
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-[#FFDCDC] p-5 lg:p-3 xl:p-5 rounded-[20px] text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg group">
-                <div class="overflow-hidden rounded-[10px] mb-4">
-                    <img src="/images/homepage/Underarm&FoldCream.svg" alt="Underarm Cream" class="w-full h-100 md:h-72 lg:h-64 xl:h-87.5 object-cover transition-transform duration-500 group-hover:scale-105 block">
-                </div>
-                <h3 class="font-playfair text-xl md:text-2xl lg:text-lg xl:text-2xl font-medium mb-3 text-black">Underarm Cream</h3>
-                <div class="flex flex-col xl:flex-row justify-center items-center gap-3 lg:gap-2 xl:gap-4">
-                    <span class="font-lora text-lg md:text-xl lg:text-base xl:text-xl font-bold text-black">Rp120.000</span>
-                    <a href="/ourproducts" class="w-full xl:w-auto">
-                        <button class="w-full xl:w-auto bg-[#FFE8CD] border-none py-2 px-4 lg:px-2 xl:px-4 text-sm md:text-base lg:text-sm xl:text-base cursor-pointer rounded-[50px] font-playfair transition duration-200 hover:bg-[#ffdcb0] hover:scale-105 whitespace-nowrap">
-                            View Details
-                        </button>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
-
     </section>
 
     <br>

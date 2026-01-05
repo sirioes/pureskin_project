@@ -27,7 +27,6 @@ Alpine.data("navbarSearch", () => ({
 
     // Fungsi fetch data ke Laravel
     async performSearch() {
-        // Jangan cari jika huruf kurang dari 2
         if (this.keyword.length < 2) {
             this.results = [];
             return;
@@ -36,7 +35,6 @@ Alpine.data("navbarSearch", () => ({
         this.isLoading = true;
 
         try {
-            // Pastikan Anda sudah membuat Route '/search-products' di Laravel
             const response = await fetch(
                 `/search-products?query=${this.keyword}`,
             );
@@ -109,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.querySelector(".mySwiper")) {
         const swiper = new Swiper(".mySwiper", {
             slidesPerView: 4,
-            spaceBetween: 30,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -117,15 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
             breakpoints: {
                 320: {
                     slidesPerView: 2,
-                    spaceBetween: 10,
                 },
                 640: {
                     slidesPerView: 3,
-                    spaceBetween: 20,
                 },
                 1024: {
                     slidesPerView: 4,
-                    spaceBetween: 30,
                 },
             },
         });
@@ -155,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeButtons.forEach((btn) => {
         btn.addEventListener("click", (e) => {
-            e.preventDefault(); // Tambahkan ini untuk keamanan
+            e.preventDefault();
             const targetId = btn.getAttribute("commandfor");
             const modal = document.getElementById(targetId);
 
@@ -164,16 +158,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.style.overflow = "auto";
             }
         });
-    });
-
-    // Close dengan klik di luar area modal (Backdrop)
-    window.addEventListener("click", (e) => {
-        if (e.target.tagName === "EL-DIALOG-BACKDROP") {
-            const modal = e.target.closest("el-dialog");
-            if (modal) {
-                modal.classList.add("hidden");
-                document.body.style.overflow = "auto";
-            }
-        }
     });
 });
