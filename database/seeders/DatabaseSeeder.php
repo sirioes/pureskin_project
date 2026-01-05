@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            ProductSeeder::class, // Baris ini wajib ada agar ProductSeeder dijalankan
+            ProductSeeder::class,
         ]);
     }
 }

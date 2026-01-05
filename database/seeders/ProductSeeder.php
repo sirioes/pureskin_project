@@ -141,7 +141,7 @@ class ProductSeeder extends Seeder
                 'ingredients' => 'Urea, Shea Butter, Tea Tree Oil, Peppermint Oil.',
             ],
             [
-                'name' => 'Intensive Repair Body Serum (Night)',
+                'name' => 'Intensive Repair Body Serum',
                 'price' => 67000,
                 'image' => 'images/our-products/body-care/intensive-repair-body-serum-night.jpg',
                 'category' => 'body-care',
