@@ -15,7 +15,7 @@ Route::get('/', function () {
 // 2. Halaman Login (Menampilkan form login)
 Route::get('/login', function () {
     return view('login');
-})->name('login'); // <--- Nama ini HARUS ADA agar redirect dari Controller bekerja
+})->name('login');
 
 // 3. Halaman Register (Menampilkan form register)
 Route::get('/register', function () {
@@ -75,3 +75,6 @@ Route::get('/ourproducts', function () {
 
 // 12. Halaman Our Products untuk menampilkan Modal Dialogs
 Route::get('/ourproducts', [ProductController::class, 'index'])->name('products.index');
+
+
+Route::get('/', [ProductController::class, 'indexHome'])->name('home');

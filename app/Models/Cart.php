@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Products; // <--- TAMBAHKAN BARIS INI
+use App\Models\Products;
 
 class Cart extends Model
 {

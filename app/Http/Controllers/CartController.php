@@ -22,7 +22,6 @@ class CartController extends Controller
                 'product_id' => $request->product_id
             ],
             [
-                // Jangan pakai increment lagi di sini jika sudah ada default quantity di migrasi
                 'quantity' => \DB::raw('1') 
             ]
         );

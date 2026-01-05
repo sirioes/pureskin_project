@@ -16,9 +16,6 @@ class ProductController extends Controller
             return response()->json([]);
         }
 
-        // KITA PAKAI MODE AMAN:
-        // Cuma cari di 'name' dan 'category'.
-        // Hapus pencarian 'description' karena bikin error 500 kalau kolomnya gak ada.
         $products = Products::where(function ($q) use ($query) {
             $q->where('name', 'like', "%{$query}%")
                 ->orWhere('category', 'like', "%{$query}%");
@@ -60,5 +57,12 @@ class ProductController extends Controller
             'bestPackages',
             'semuaProdukModal'
         ));
+    }
+
+    // Di ProductController.php
+    public function indexHome() {
+        $bestSellers = Products::where('category', 'best-sellers')->get();
+        $bestPackages = Products::where('category', 'best-packages')->get();
+        return view('home', compact('bestSellers', 'bestPackages'));
     }
 }
